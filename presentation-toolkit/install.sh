@@ -10,7 +10,7 @@ mkdir -p "$TOOLS_DIR" "$SKILLS_DIR"
 
 clone_or_pull() {  # $1 = owner/repo
   local dir="$TOOLS_DIR/${1#*/}"
-  if [ -d "$dir/.git" ]; then git -C "$dir" pull --ff-only; else git clone --depth 1 "https://github.com/$1.git" "$dir"; fi
+  if [ -d "$dir/.git" ]; then git -C "$dir" pull --ff-only -q || true; else git clone -q --depth 1 "https://github.com/$1.git" "$dir"; fi
 }
 
 for repo in op7418/guizang-ppt-skill nexu-io/open-design iamgio/quarkdown FormidableLabs/spectacle; do
@@ -25,6 +25,9 @@ cp -r "$TOOLS_DIR/guizang-ppt-skill" "$SKILLS_DIR/guizang-ppt-skill"
 for s in data-report frontend-slides slides frame-data-chart-nyt design-consultation html-ppt-retro-quarterly-review; do
   rm -rf "$SKILLS_DIR/$s"; cp -r "$TOOLS_DIR/open-design/skills/$s" "$SKILLS_DIR/$s"
 done
+
+# QUICK=1 (used by the SessionStart hook): repos + skills only, skip the slow builds.
+if [ "${QUICK:-0}" = "1" ]; then echo "Quick install done (skills only)."; exit 0; fi
 
 # 3. OpenDesign app (Node 24 + pnpm 10.33 via corepack). Start with: pnpm tools-dev run web
 if node -v | grep -q '^v24'; then

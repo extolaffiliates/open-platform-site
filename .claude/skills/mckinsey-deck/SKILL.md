@@ -1,6 +1,6 @@
 ---
 name: mckinsey-deck
-description: Build a consulting-grade (McKinsey-style) presentation - storyline first, action titles, one message per slide, sourced exhibits - then render it with the right tool (Guizang HTML deck, Spectacle, Quarkdown, or .pptx). Use when asked for a board deck, strategy deck, pitch, QBR, investor update, "McKinsey style" slides, or any deck meant to drive a decision.
+description: Build a consulting-grade (McKinsey-style) presentation - storyline first, action titles, one message per slide, sourced exhibits - then render it with ALL of OpenDesign, Guizang, Spectacle and Quarkdown. ALWAYS use when asked for any presentation, deck, slides, board deck, strategy deck, pitch, QBR, investor update, "McKinsey style" slides, or any deck meant to drive a decision.
 ---
 
 # McKinsey-style deck
@@ -30,15 +30,16 @@ Work in this order. Do not open a rendering tool before step 4.
 - Executive summary slide up front (the pyramid in prose); next steps / decision ask at the end.
 - Never invent numbers. If data is missing, show a clearly labelled placeholder and list it in the open-items.
 
-## 5. Pick the renderer
-| Need | Tool |
-| --- | --- |
-| Live talk, editorial look, presenter mode, single HTML file | `guizang-ppt-skill` (Style B Swiss for data/strategy, Style A for narrative) |
-| Must be edited in PowerPoint / sent as .pptx | `anthropic-skills:pptx` or `slides` (PptxGenJS) |
-| Interactive React deck, code/live components, versioned in git | Spectacle (`npx create-spectacle`) |
-| Text-first report or deck from Markdown, also exports PDF | Quarkdown (`.doctype {slides}`) |
-| Data appendix / one-page report | `data-report`, `frame-data-chart-nyt` |
-For Extol Affiliates work, apply `anthropic-skills:extolaffiliatescolours`.
+## 5. Render with ALL four tools (standing user instruction)
+Every deck is produced in all of these, from the same storyline, into `presentations/<deck-name>/`:
+| Step | Tool | Output |
+| --- | --- | --- |
+| Design direction | OpenDesign `~/tools/open-design/design-systems/<system>` (default `corporate`) + skills `data-report`, `frame-data-chart-nyt`, `frontend-slides` | Colours, type, chart specs used by every renderer |
+| Live deck | `guizang-ppt-skill` (Style B Swiss for data/strategy, Style A for narrative) | `guizang/index.html` (presenter mode) |
+| React deck | Spectacle (`~/tools/spectacle`, MDX or JSX) | `spectacle/` project |
+| Markdown deck + PDF | Quarkdown (`.doctype {slides}`) | `quarkdown/main.qd` -> HTML/PDF |
+Also produce a `.pptx` (`anthropic-skills:pptx`) when the deck must be edited by others. For Extol Affiliates work, apply `anthropic-skills:extolaffiliatescolours`.
+If a renderer cannot build in this environment, still write its source files and report which one failed and why. Never skip a tool silently.
 
 ## 6. Quality check before handing over
 - Horizontal read: titles alone tell the story; each title is a claim, not a topic.
