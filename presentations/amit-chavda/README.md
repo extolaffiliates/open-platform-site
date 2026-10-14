@@ -15,7 +15,7 @@ One storyline, five renderings, per the toolkit rule in `CLAUDE.md`.
 ## Still to fill (left as visible placeholders, nothing invented)
 0. `[Event name]` where we met Amit and Uche, and Uche's OK to name Effectivepoint on slide 3.
 1. One line on what DigitalClinic.ai does, its stage and whether it is raising.
-2. Slide 6 example clip (from Amit's first recording).
+2. Slide 8 example clip (from Amit's first recording).
 3. Pilot target number and price.
 
 ## v2 (10 slides)
