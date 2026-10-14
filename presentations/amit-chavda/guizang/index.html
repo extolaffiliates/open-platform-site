@@ -9,29 +9,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* ============ Theme colours: Extol palette (design/tokens.css) ============
-       Deep Forest ink, Pine accent, Sage bright accent, Cream page, Paper cards. */
-    --paper:#E9F0C9;          /* page: Extol cream */
-    --paper-rgb:233,240,201;
-    --ink:#101F14;            /* text: Extol deep forest */
-    --ink-rgb:16,31,20;
-    --grey-1:#F6F8EC;         /* card surface: Extol paper */
-    --grey-2:#C9D4AE;         /* hairline on cream */
-    --grey-3:#5C6B57;         /* helper text */
-    --accent:#1D3524;         /* Extol pine */
-    --accent-rgb:29,53,36;
-    --accent-on:#E9F0C9;      /* cream on pine */
-    --accent-bright:#9EBB80;  /* Extol sage: highlight on dark */
-    --accent-bright-rgb:158,187,128;
+    /* ============ Theme colours: certified Extol tokens (../design/tokens.css) ============
+       oat page, oat-2 cards, forest ink, field-top dark slides, field-mid dark cards,
+       bone on dark, moss highlight on dark, fern accent on light. */
+    --paper:#EDE9DC;          /* oat: page, warm, never white */
+    --paper-rgb:237,233,220;
+    --ink:#1D2A1B;            /* forest: ink on oat, never black */
+    --ink-rgb:29,42,27;
+    --grey-1:#E4DFCE;         /* oat-2: card surface on oat */
+    --grey-2:#CCC6B1;         /* hairline on oat */
+    --grey-3:#545C4C;         /* helper text: 5.2:1 on oat-2, 5.8:1 on oat */
+    --accent:#0C1A11;         /* field-top: dark slides, accent blocks */
+    --accent-rgb:12,26,17;
+    --accent-on:#EAE7DA;      /* bone: ink on dark */
+    --accent-on-rgb:234,231,218;
+    --accent-bright:#C6DE93;  /* moss: highlight on dark */
+    --accent-bright-rgb:198,222,147;
+    --card-dark:#1B3A22;      /* field-mid: dark cards */
+    --card-dark-rgb:27,58,34;
+    --fern:#55703A;           /* fern: accent on light (4.6:1 on oat; rules, marks, large numerals) */
+    --fern-rgb:85,112,58;
 
-    /* text roles (Extol greens instead of neutral greys) */
-    --text-primary:#101F14;
-    --text-secondary:#3B4A3E;
-    --text-helper:#5C6B57;
-    --text-placeholder:#8E9A86;
-    --text-on-color:#E9F0C9;
-    --border-subtle:#D3DCB8;
-    --border-strong:#8E9A86;
+    /* text roles (Extol forest family instead of neutral greys) */
+    --text-primary:#1D2A1B;
+    --text-secondary:#3A4636;
+    --text-helper:#545C4C;
+    --text-placeholder:#7E8572;
+    --text-on-color:#EAE7DA;
+    --border-subtle:#D3CDB9;
+    --border-strong:#7E8572;
 
     /* ============ 字体(跨主题固定) ============ */
     --sans:"Inter","Helvetica Neue","Helvetica","Arial","Segoe UI Variable","Segoe UI",system-ui,-apple-system,sans-serif;
@@ -605,10 +611,10 @@
   #overview .slide *{animation:none!important;transition:none!important}
 
   /* 统一卡片样式 token: card-fill (默认灰底 · 中性) + card-ink (反转高对比) + card-accent (单一焦点) */
-  .card-fill{background:var(--grey-1);border:0;color:var(--text-primary)}
-  .card-ink{background:var(--ink);border:0;color:var(--paper)}
+  .card-fill{background:var(--grey-1);border:none;color:var(--text-primary)}
+  .card-ink{background:var(--card-dark);border:none;color:var(--accent-on)}
   .card-ink .t-meta,.card-ink .t-cat{color:rgba(var(--paper-rgb),.66)}
-  .card-accent{background:var(--accent);border:0;color:var(--accent-on)}
+  .card-accent{background:var(--card-dark);border:none;color:var(--accent-on)}
   .card-accent .t-meta,.card-accent .t-cat{color:var(--accent-on)}
 
   /* ============ 动效 (与原模板一致) ============ */
@@ -1176,11 +1182,41 @@
   body.dark-bg #nav .dot.active{background:var(--accent-bright)}
   .duo-compare .col-list{margin-top:2vh}
   .split-half > .half.nav-lift{padding-bottom:9vh!important}
+  .ctl-list li.own{grid-column:1/-1}
+  /* S05 same room */
+  .room-row{margin-top:0;gap:1.4vw}
+  .room-row .stack-block{padding:28px 1.8vw 24px;gap:0}
+  .room-row .layer-nb{margin-bottom:2.4vh;opacity:1;color:var(--text-helper);font-size:15px;letter-spacing:.02em}
+  .proof-col .pc-unit{font-size:34px;letter-spacing:-.01em}
+  .src-line{font-family:var(--sans);font-size:15px;font-weight:400;line-height:1.5;color:var(--text-helper)}
+  .room-row .b-accent .layer-nb{color:rgba(var(--accent-on-rgb),.74)}
+  .room-row .layer-ttl{font-weight:300;font-size:min(2vw,3.6vh);line-height:1.12}
+  .room-row .layer-desc{opacity:1;color:var(--text-secondary)}
+  .room-row .b-accent .layer-desc{color:rgba(var(--accent-on-rgb),.86)}
+  .room-meta{margin-top:auto;padding-top:1.6vh;border-top:1px solid var(--grey-2);font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;line-height:1.5;color:var(--text-helper)}
+  .room-steps{display:flex;flex-direction:column;margin-top:2vh;border-top:1px solid rgba(var(--accent-on-rgb),.22)}
+  .room-steps > div{display:grid;grid-template-columns:7.2vw minmax(0,1fr);gap:1vw;align-items:baseline;padding:1vh 0;border-bottom:1px solid rgba(var(--accent-on-rgb),.22)}
+  .room-steps .k{font-family:var(--sans);font-weight:500;font-size:max(17px,1.05vw);color:var(--accent-bright)}
+  .room-steps .v{font-family:var(--sans);font-size:max(16px,.9vw);line-height:1.4;color:rgba(var(--accent-on-rgb),.86)}
+  .room-out{margin-top:auto;padding-top:1.6vh;font-family:var(--sans);font-size:max(16px,.95vw);line-height:1.45;color:var(--accent-on)}
+  .room-out b{display:block;font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-bright);margin-bottom:.6vh}
+  .room-foot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3vw;align-items:end}
+  .room-bar{display:flex;align-items:baseline;gap:1vw;padding-top:2vh;border-top:2px solid var(--fern);font-family:var(--sans);font-weight:400;font-size:max(18px,1.12vw);line-height:1.4;color:var(--text-primary)}
+  .room-bar b{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--fern);white-space:nowrap}
+  /* S19 proof */
+  .proof-rule{width:80px;height:3px;background:var(--fern)}
+  .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;min-height:0}
+  .proof-col{display:flex;flex-direction:column;padding:28px 1.6vw 0;border-left:1px solid var(--grey-2);border-top:1px solid var(--ink);min-width:0}
+  .proof-col:first-child{border-left:none;padding-left:0}
+  .proof-col .pc-agent{font-family:var(--sans);font-weight:500;font-size:max(18px,1.15vw);line-height:1.25;color:var(--text-primary);margin-top:1.2vh}
+  .proof-col .pc-num{font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.4vh);line-height:1;letter-spacing:-.04em;color:var(--fern);font-feature-settings:"tnum";margin-top:4.4vh;white-space:nowrap}
+  .proof-col .pc-lbl{font-family:var(--sans);font-weight:500;font-size:max(17px,1.02vw);line-height:1.35;color:var(--text-primary);margin-top:1.4vh;max-width:24ch}
+  .proof-col .pc-desc{font-family:var(--sans);font-weight:400;font-size:max(16px,.92vw);line-height:1.5;color:var(--text-secondary);margin-top:auto;padding-top:2.4vh;max-width:30ch}
   /* S01 cover rows: big number left, label right */
-  .cover-row{display:grid;grid-template-columns:8vw 1fr;align-items:baseline;gap:1.6vw;padding:1.2vh 0;border-top:1px solid rgba(233,240,201,.22)}
+  .cover-row{display:grid;grid-template-columns:8vw 1fr;align-items:baseline;gap:1.6vw;padding:1.2vh 0;border-top:1px solid rgba(var(--accent-on-rgb),.22)}
   .cover-row:first-child{border-top:none;padding-top:0}
   .cover-nb{font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.2vh);line-height:1;letter-spacing:-.04em;color:var(--accent-on);font-feature-settings:"tnum"}
-  .cover-lbl{font-family:var(--mono);font-size:max(14px,.9vw);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(233,240,201,.82)}
+  .cover-lbl{font-family:var(--mono);font-size:max(14px,.9vw);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(var(--accent-on-rgb),.82)}
   /* S11 timeline description floor */
   .timeline-h .th-node .desc.tl-desc{font-size:max(16px,.9vw);line-height:1.45}
   .timeline-h .th-node .name{font-size:max(18px,1.3vw)}
@@ -1238,15 +1274,28 @@
   .ctl-output .nb{font-family:var(--sans);font-weight:200;font-size:min(3vw,5.4vh);line-height:1;letter-spacing:-.03em;color:var(--accent);font-feature-settings:"tnum"}
   .ctl-output .lb{font-family:var(--sans);font-size:max(16px,.92vw);line-height:1.3;color:var(--text-secondary)}
   /* S10 closing */
-  .price-shape .row{display:grid;grid-template-columns:11vw minmax(0,1fr);gap:1.2vw;align-items:baseline;padding:1.2vh 0;border-top:1px solid rgba(233,240,201,.22)}
+  .price-shape .row{display:grid;grid-template-columns:11vw minmax(0,1fr);gap:1.2vw;align-items:baseline;padding:1.2vh 0;border-top:1px solid rgba(var(--accent-on-rgb),.22)}
   .price-shape .k{font-family:var(--sans);font-weight:500;font-size:max(16px,1vw);color:var(--accent-on)}
-  .price-shape .v{font-family:var(--sans);font-weight:400;font-size:max(16px,.92vw);line-height:1.45;color:rgba(233,240,201,.82)}
+  .price-shape .v{font-family:var(--sans);font-weight:400;font-size:max(16px,.92vw);line-height:1.45;color:rgba(var(--accent-on-rgb),.82)}
   .q-list{display:flex;flex-direction:column}
   .q{display:grid;grid-template-columns:4vw minmax(0,1fr);gap:1.2vw;align-items:baseline;padding:1.6vh 0;border-top:1px solid var(--border-subtle)}
   .q.is-last{border-bottom:2px solid var(--accent)}
   .q .qn{font-family:var(--sans);font-weight:200;font-size:min(2.4vw,4.3vh);line-height:1;letter-spacing:-.03em;color:var(--text-primary)}
   .q .qk{display:block;font-family:var(--sans);font-weight:500;font-size:max(18px,1.1vw);line-height:1.25;color:var(--accent);margin-bottom:.5vh}
   .q .qv{display:block;font-family:var(--sans);font-weight:400;font-size:max(16px,.95vw);line-height:1.45;color:var(--text-secondary)}
+
+  /* Extol certified theme: dark slides on field-top, dark cards on field-mid, fern accents on light */
+  .slide.dark .canvas-card,.split-half > .half.b-ink,.stack-block.b-ink{background:var(--accent);color:var(--accent-on)}
+  .slide.dark .sub-card{background:var(--card-dark)}
+  .stack-block.b-accent,.sub-card.accent{background:var(--card-dark);color:var(--accent-on)}
+  .slide.dark .t-cat,.slide.dark .t-meta,.slide.dark .t-helper,.slide.dark .canvas-card .chrome-min,
+  .slide.accent .canvas-card .chrome-min,.split-half > .half.b-accent .chrome-min{color:rgba(var(--accent-on-rgb),.7)}
+  .slide.accent .canvas-card .t-meta{color:rgba(var(--accent-on-rgb),.74)}
+  .card-ink .t-meta,.card-ink .t-cat{color:rgba(var(--accent-on-rgb),.74)}
+  .goal-bar{border-top-color:var(--fern)}
+  .goal-bar .sq,.ctl-list li::before{background:var(--fern)}
+  .q.is-last{border-bottom-color:var(--fern)}
+  .duo-compare .col.accent .col-list li::before{background:var(--fern)}
 
   /* 响应式降级 */
   @media (max-width:900px){
@@ -1303,9 +1352,9 @@
 <div id="deck">
 
 <!-- ============================================================
-     Amit Chavda x Extol · 8 slides · Swiss locked mode
+     Amit Chavda x Extol · 10 slides · Swiss locked mode
      Content source: presentations/amit-chavda/storyline.md
-     Layouts: S01 · S11 · S08 · S14 · S04 · S16 · S13 · S10
+     Layouts: S01 · S11 · S05 · S08 · S14 · S19 · S04 · S16 · S13 · S10
      ============================================================ -->
 
 <!-- 01 · Cover · S01 Index Cover (three cover-rows: big number left, label right) -->
@@ -1314,15 +1363,15 @@
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
       <div class="l">Amit Chavda × Extol</div>
-      <div class="r">London · October 2026 · 01 / 08</div>
+      <div class="r">London · October 2026 · 01 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto auto 1fr;gap:3vh;min-height:0">
-      <div data-anim="kicker" class="t-meta" style="color:rgba(233,240,201,.78);letter-spacing:.22em">Extol Affiliates · Proposal</div>
+      <div data-anim="kicker" class="t-meta" style="color:rgba(var(--accent-on-rgb),.78);letter-spacing:.22em">Extol Affiliates · Proposal</div>
       <h1 data-anim="title" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.9vw,8.8vh);line-height:1;letter-spacing:-.03em;color:var(--accent-on);max-width:21ch">A founder voice NHS imaging buyers and investors <span style="font-style:italic;font-weight:300">already trust.</span></h1>
-      <div style="align-self:end;display:grid;grid-template-columns:5fr 7fr;gap:4vw;align-items:end;border-top:1px solid rgba(233,240,201,.24);padding-top:3vh">
+      <div style="align-self:end;display:grid;grid-template-columns:5fr 7fr;gap:4vw;align-items:end;border-top:1px solid rgba(var(--accent-on-rgb),.24);padding-top:3vh">
         <div data-anim="lead" style="display:flex;flex-direction:column;gap:2.4vh">
-          <p style="font-family:var(--sans);font-weight:300;font-size:max(18px,1.3vw);line-height:1.5;color:rgba(233,240,201,.9);max-width:38ch">The founder-led marketing system for Amit Chavda and DigitalClinic.ai. <span class="ph">[One line: what DigitalClinic.ai does]</span></p>
-          <div class="t-meta" style="color:rgba(233,240,201,.62)">Prepared for Amit Chavda · London, October 2026</div>
+          <p style="font-family:var(--sans);font-weight:300;font-size:max(18px,1.3vw);line-height:1.5;color:rgba(var(--accent-on-rgb),.9);max-width:38ch">The founder-led marketing system for Amit Chavda and DigitalClinic.ai. <span class="ph">[One line: what DigitalClinic.ai does]</span></p>
+          <div class="t-meta" style="color:rgba(var(--accent-on-rgb),.62)">Prepared for Amit Chavda · London, October 2026</div>
         </div>
         <div style="display:flex;flex-direction:column">
           <div class="cover-row"><span class="cover-nb">19</span><span class="cover-lbl">years in UK imaging</span></div>
@@ -1339,7 +1388,7 @@
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Why Amit · Situation</div>
-      <div class="r">02 / 08</div>
+      <div class="r">02 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:3vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1374,12 +1423,56 @@
   </div>
 </section>
 
-<!-- 03 · Goal · S08 Duo Compare -->
+<!-- 03 · Same room · S05 Three Layers (top-left title, three blocks: who / shared gap / approach) -->
+<section class="slide light" data-layout="S05" data-animate="stack-build" data-slide-id="same-room">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">Same room · Complication</div>
+      <div class="r">03 / 10</div>
+    </div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:32px;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
+        <div class="t-cat">Same event, same gap</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.2vw,5.7vh);line-height:1.06;letter-spacing:-.03em;max-width:40ch">Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.</h2>
+      </div>
+      <div class="stack-row room-row">
+        <div class="stack-block b-grey">
+          <div class="layer-nb">01 · Who</div>
+          <div class="layer-ttl">Dr Uche Nnene FCCA</div>
+          <div class="layer-desc">Co-founder, Effectivepoint. Former EY partner. ERP, Finance and AI transformation for CFOs.</div>
+          <div class="room-meta">Met at <span class="ph">[Event name]</span></div>
+        </div>
+        <div class="stack-block b-grey">
+          <div class="layer-nb">02 · The shared gap</div>
+          <div class="layer-ttl">Deep expertise and named results that live in the work, not where senior buyers look.</div>
+          <div class="layer-desc">Senior, cautious buyers (CFOs / NHS imaging leaders) who pick people they already know.</div>
+        </div>
+        <div class="stack-block b-accent">
+          <div class="layer-nb">03 · The approach we've put to Effectivepoint</div>
+          <div class="room-steps">
+            <div><span class="k">Watch</span><span class="v">buyers' posts in their sectors</span></div>
+            <div><span class="k">Draft</span><span class="v">comments and proof posts in the founder's voice</span></div>
+            <div><span class="k">Approve</span><span class="v">a minute each</span></div>
+            <div><span class="k">Publish</span><span class="v">from the founder's own account</span></div>
+            <div><span class="k">Measure</span><span class="v">who replied</span></div>
+          </div>
+          <div class="room-out"><b>First outcome</b>One Finance Director conversation that started on LinkedIn.</div>
+        </div>
+      </div>
+      <div class="room-foot">
+        <div class="room-bar"><b>For Amit</b><span>The same buyer-comment engine on NHS imaging leaders' posts, alongside the weekly recording.</span></div>
+        <div class="src-line" style="white-space:nowrap">Effectivepoint named with permission <span class="ph">[confirm with Uche before sending]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · Goal · S08 Duo Compare -->
 <section class="slide light" data-layout="S08" data-animate="duo-mirror" data-slide-id="goal">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">Goal · Complication → Resolution</div>
-      <div class="r">03 / 08</div>
+      <div class="l">Goal · Resolution</div>
+      <div class="r">04 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1409,12 +1502,12 @@
   </div>
 </section>
 
-<!-- 04 · How it works · S14 Loop Form (left steps, right geometric loop; labels in HTML) -->
+<!-- 05 · How it works · S14 Loop Form (left steps, right geometric loop; labels in HTML) -->
 <section class="slide dark" data-layout="S14" data-animate="loop-form" data-slide-id="how-it-works">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">How it works · Weekly loop</div>
-      <div class="r">04 / 08</div>
+      <div class="r">05 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:3.4vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1461,12 +1554,69 @@
   </div>
 </section>
 
-<!-- 05 · Tools · S04 Six Cells (five tools + one channel cell) -->
+<!-- 06 · Proof · S19 Four Cards (top rule + four equal columns, one sourced result each) -->
+<section class="slide light" data-layout="S19" data-animate="four-cards" data-slide-id="proof">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">Proof · Running today</div>
+      <div class="r">06 / 10</div>
+    </div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:5vh;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:2.4vh">
+        <div class="proof-rule"></div>
+        <div style="display:flex;flex-direction:column;gap:1.6vh">
+          <div class="t-cat">Running today</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.8vw,6.8vh);line-height:1.04;letter-spacing:-.03em;max-width:30ch">The engine already runs: four Extol agents, each with a sourced result.</h2>
+        </div>
+      </div>
+      <div data-anim="up" class="proof-grid">
+        <div class="proof-col">
+          <div class="t-meta">— 01 / Agent</div>
+          <div class="pc-agent">LinkedIn Manager</div>
+          <div class="pc-num">40%</div>
+          <div class="pc-lbl">of invites accepted</div>
+          <div class="pc-desc">25 live personal brand campaigns, a personal note for every request</div>
+        </div>
+        <div class="proof-col">
+          <div class="t-meta">— 02 / Agent</div>
+          <div class="pc-agent">AI Social Media Manager</div>
+          <div class="pc-num">+326.2%</div>
+          <div class="pc-lbl">LinkedIn impressions over 90 days</div>
+          <div class="pc-desc">One approval click in Slack per post</div>
+        </div>
+        <div class="proof-col">
+          <div class="t-meta">— 03 / Agent</div>
+          <div class="pc-agent">Lead Magnet Agent</div>
+          <div class="pc-num">57.4%</div>
+          <div class="pc-lbl">open rate</div>
+          <div class="pc-desc">61 sequences, one email written for one business</div>
+        </div>
+        <div class="proof-col">
+          <div class="t-meta">— 04 / Agent</div>
+          <div class="pc-agent">Finance Handler Agent</div>
+          <div class="pc-num">2<span class="pc-unit"> minutes</span></div>
+          <div class="pc-lbl">from call transcript to priced proposal</div>
+          <div class="pc-desc">Down from 2 days</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3vw;align-items:end">
+        <div class="goal-bar" style="grid-template-columns:repeat(3,auto);gap:2.6vw">
+          <div><span class="sq"></span>Fixed price, agreed up front.</div>
+          <div><span class="sq"></span>Built in your accounts; you own everything.</div>
+          <div><span class="sq"></span>No lock-in.</div>
+        </div>
+        <div class="src-line" style="text-align:right;max-width:44ch">Source: extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly 29 Mar–29 Apr 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · Tools · S04 Six Cells (five tools + one channel cell) -->
 <section class="slide light" data-layout="S04" data-animate="grid-reveal" data-slide-id="tools">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Tools · The stack</div>
-      <div class="r">05 / 08</div>
+      <div class="r">07 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1485,12 +1635,12 @@
   </div>
 </section>
 
-<!-- 06 · Example · S16 Multi-card Brief (3 x 2 micro cards, one accent) -->
+<!-- 08 · Example · S16 Multi-card Brief (3 x 2 micro cards, one accent) -->
 <section class="slide light" data-layout="S16" data-animate="field-notes" data-slide-id="example">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Example · Placeholder</div>
-      <div class="r">06 / 08</div>
+      <div class="r">08 / 10</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1533,12 +1683,12 @@
   </div>
 </section>
 
-<!-- 07 · Control and first outcome · S13 Three Forces (left ink hero + right three cards) -->
+<!-- 09 · Control and first outcome · S13 Three Forces (left ink hero + right three cards) -->
 <section class="slide light" data-layout="S13" data-animate="three-forces" data-slide-id="control">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Control · First outcome</div>
-      <div class="r">07 / 08</div>
+      <div class="r">09 / 10</div>
     </div>
     <div data-anim="up" style="flex:1;padding:0;display:grid;grid-template-columns:5fr 11fr;gap:1.4vw;min-height:0">
       <div class="card-ink" style="padding:4vh 2.2vw 3.6vh;display:flex;flex-direction:column;justify-content:space-between;gap:3vh;min-height:0">
@@ -1561,6 +1711,7 @@
             <li>AXREM positions only when AXREM has published them.</li>
             <li>Clinical, regulatory and performance claims need explicit sign-off.</li>
             <li>Check the Radiobotics contract and conflict-of-interest policy before launch.</li>
+            <li class="own">Everything runs in Amit's own accounts; he owns every account, credential and file.</li>
           </ul>
         </div>
         <div class="card-fill ctl-card">
@@ -1585,28 +1736,28 @@
   </div>
 </section>
 
-<!-- 08 · Next · S10 Split Closing (left statement + pricing shape, right six questions) -->
+<!-- 10 · Next · S10 Split Closing (left statement + pricing shape, right six questions) -->
 <section class="slide split" data-layout="S10" data-animate="split-statement" data-slide-id="next">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-accent nav-lift" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden;gap:3vh">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
-          <div class="l">08 / 08</div>
+          <div class="l">10 / 10</div>
           <div class="r">Next</div>
         </div>
         <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(233,240,201,.78);letter-spacing:.22em">Next · Scoping</div>
+          <div class="t-meta" style="color:rgba(var(--accent-on-rgb),.78);letter-spacing:.22em">Next · Scoping</div>
           <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(5vw,8.8vh);line-height:1;letter-spacing:-.03em;font-weight:200;color:var(--accent-on)">Six answers, then we <span style="font-style:italic;font-weight:300">price the pilot.</span></h2>
         </div>
         <div data-anim="pricing" class="price-shape" style="position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(233,240,201,.62);margin-bottom:1.2vh">Pricing shape</div>
+          <div class="t-meta" style="color:rgba(var(--accent-on-rgb),.62);margin-bottom:1.2vh">Pricing shape</div>
           <div class="row"><span class="k">Fixed setup</span><span class="v">Workflow, accounts, brand rules, templates, tracking</span></div>
           <div class="row"><span class="k">Monthly operation</span><span class="v">Planning, production, review pack, scheduling, reporting</span></div>
           <div class="row"><span class="k">Capped tools</span><span class="v">ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost</span></div>
         </div>
-        <div data-anim="signature" style="border-top:1px solid rgba(233,240,201,.24);padding-top:2vh;position:relative;z-index:1">
-          <div style="font-family:var(--sans);font-weight:400;font-size:max(18px,1.12vw);line-height:1.4;color:var(--accent-on)">Nothing publishes until you approve the complete pack.</div>
+        <div data-anim="signature" style="border-top:1px solid rgba(var(--accent-on-rgb),.24);padding-top:2vh;position:relative;z-index:1">
+          <div style="font-family:var(--sans);font-weight:400;font-size:max(18px,1.12vw);line-height:1.4;color:var(--accent-on)"><span style="color:var(--accent-bright)">Fixed price, agreed up front.</span> Nothing publishes until you approve the complete pack.</div>
         </div>
       </div>
       <div class="half nav-lift" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
@@ -1656,7 +1807,19 @@ const SPEAKER_NOTES = [
       'Industry voice, 2026-now: Vice Convenor of the AXREM AI Special Focus Group; AXREM has 120+ member companies and was founded in 1994.',
       'Land the callout: reading room, commissioning meeting and vendor pitch is the edge, and almost nobody outside his network sees it. Source: LinkedIn via Apollo, Oct 2026.'
     ],
-    transition: 'That edge is invisible today, so the question becomes who needs to see it and why.'
+    transition: 'That edge is invisible today, and we have just seen the same gap in another founder in the same room.'
+  },
+  {
+    id: 'same-room', title: 'Uche Nnene has the same gap in finance; we\'ve put the same engine to Effectivepoint',
+    purpose: 'Complication: show the gap is a pattern, not a one-off, using a peer met in the same room',
+    talk: [
+      'Why this matters now: we met Dr Uche Nnene FCCA, co-founder of Effectivepoint and a former EY partner, at the same event as Amit ([Event name]).',
+      'The pattern is identical: deep expertise and named results that live in the work, not where senior, cautious buyers look; CFOs and NHS imaging leaders pick people they already know.',
+      'This is the approach we have put to Effectivepoint, a proposal, not results: watch buyers\' posts, draft comments and proof posts, approve in a minute each, publish from the founder\'s own account, measure who replied.',
+      'For Amit: the same buyer-comment engine on NHS imaging leaders\' posts, alongside the weekly recording.',
+      'Share the approach, never the other client\'s numbers; confirm with Uche that Effectivepoint can be named before sending.'
+    ],
+    transition: 'So the goal for Amit is one voice that reaches two audiences.'
   },
   {
     id: 'goal', title: 'Two audiences, one voice',
@@ -1680,7 +1843,19 @@ const SPEAKER_NOTES = [
       'Only Record and Approve need Amit.',
       'The DigitalClinic.ai website is home base: every post points to a page about Amit, the product, an article or a demo request.'
     ],
-    transition: 'The loop runs on a small stack of tools, each with one job.'
+    transition: 'This is not theory: the engine already runs, with sourced results.'
+  },
+  {
+    id: 'proof', title: 'The engine already runs: four Extol agents, each with a sourced result',
+    purpose: 'Show that the pieces already work before asking Amit to commit',
+    talk: [
+      'Proof that the pieces already work, on our own and clients\' accounts.',
+      'LinkedIn Manager: 40% of invites accepted across 25 live personal brand campaigns. AI Social Media Manager: LinkedIn impressions up 326.2% over 90 days, one approval click in Slack per post.',
+      'Lead Magnet Agent: 57.4% open rate across 61 sequences. Finance Handler Agent: call transcript to priced proposal in 2 minutes, down from 2 days.',
+      'Amit\'s version reuses the LinkedIn Manager and Social Media Manager directly. Fixed price, agreed up front; built in his accounts, he owns everything; no lock-in.',
+      'Sources: extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly 29 Mar to 29 Apr 2026.'
+    ],
+    transition: 'Here is the stack behind it, one job per tool.'
   },
   {
     id: 'tools', title: 'The stack. One job each.',
@@ -1711,7 +1886,7 @@ const SPEAKER_NOTES = [
     purpose: 'Show the control model, the guardrails and how we measure the first outcome',
     talk: [
       'Four steps: Build the weekly pack, Review claims, brand and links once, Publish only approved items, Learn from views, clicks, enquiries and investor replies.',
-      'Guardrails: no Radiobotics products, customers or pipeline; AXREM positions only once AXREM has published them.',
+      'Guardrails: no Radiobotics products, customers or pipeline; AXREM positions only once AXREM has published them. Everything runs in Amit\'s own accounts; he owns every account, credential and file.',
       'Clinical, regulatory and performance claims need explicit sign-off; check the Radiobotics contract and conflict-of-interest policy before launch.',
       'Outcome 01 is the first qualified NHS buyer conversation that came from content; the target is a number we agree before we start, and every enquiry is traced to the post that sent it.',
       'Weekly output is proposed, to confirm: 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter.'
@@ -1725,7 +1900,7 @@ const SPEAKER_NOTES = [
       'Walk the six questions: DigitalClinic.ai, audience, roles, production, access, budget.',
       'Roles matter most for safety: what the Radiobotics contract allows and how AXREM and DigitalClinic.ai are disclosed.',
       'Pricing shape: fixed setup, monthly operation, and capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost).',
-      'Close: nothing publishes until Amit approves the complete pack.'
+      'Close: fixed price, agreed up front. Nothing publishes until Amit approves the complete pack.'
     ],
     transition: 'End the presentation and move to Amit\'s answers and questions.'
   }
