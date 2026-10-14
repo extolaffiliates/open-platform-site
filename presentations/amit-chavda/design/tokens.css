@@ -1,0 +1,20 @@
+/* Design direction for the Amit Chavda deck.
+   Structure: OpenDesign design-systems/corporate (enterprise grid, 8pt baseline, display + text + mono families).
+   Colour: Extol Affiliates palette replaces corporate blue/purple (anthropic-skills:extolaffiliatescolours). */
+:root {
+  --deep-forest: #101F14;   /* text on light, darkest anchor */
+  --pine:        #1D3524;   /* dark slides, chrome */
+  --forest:      #2B4A34;   /* dark cards */
+  --moss:        #7E9C6B;   /* rules, secondary emphasis */
+  --sage:        #9EBB80;   /* accent: the one series that matters */
+  --pistachio:   #C6DE9F;   /* subtle fills, tags */
+  --cream:       #E9F0C9;   /* page background */
+  --paper:       #F6F8EC;   /* card surface on cream */
+
+  --font-display: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-text:    "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, monospace;
+
+  --space: 8px;             /* 8pt baseline grid */
+  --radius: 4px;
+}

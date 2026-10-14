@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Amit Chavda x Extol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+    <style>body{margin:0;background:#E9F0C9}</style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "htm": "https://esm.sh/htm@^3?external=react,react-dom",
+          "spectacle": "https://esm.sh/spectacle@10?external=react,react-dom&bundle",
+          "broadcast-channel": "https://esm.sh/broadcast-channel@^4.20.2?external=react,react-dom",
+          "history": "https://esm.sh/history@^5.3.0?external=react,react-dom",
+          "kbar": "https://esm.sh/kbar@0.1.0-beta.48?external=react,react-dom",
+          "lodash.clonedeep": "https://esm.sh/lodash.clonedeep@^4.5.0?external=react,react-dom",
+          "mdast-builder": "https://esm.sh/mdast-builder@^1.1.1?external=react,react-dom",
+          "mdast-zone": "https://esm.sh/mdast-zone@^4.0.1?external=react,react-dom",
+          "merge-anything": "https://esm.sh/merge-anything@^3.0.7?external=react,react-dom",
+          "mousetrap": "https://esm.sh/mousetrap@^1.6.5?external=react,react-dom",
+          "query-string": "https://esm.sh/query-string@^7.1.3?external=react,react-dom",
+          "react": "https://esm.sh/react@18.3.1?",
+          "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime?",
+          "react-dom": "https://esm.sh/react-dom@18.3.1?",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?",
+          "react-fast-compare": "https://esm.sh/react-fast-compare@^3.2.2?external=react,react-dom",
+          "react-is": "https://esm.sh/react-is@^18.3.1?external=react,react-dom",
+          "react-spring": "https://esm.sh/react-spring@^9.7.5?external=react,react-dom",
+          "react-swipeable": "https://esm.sh/react-swipeable@^7.0.2?external=react,react-dom",
+          "react-syntax-highlighter": "https://esm.sh/react-syntax-highlighter@^15.6.6?external=react,react-dom",
+          "react-syntax-highlighter/dist/cjs/styles/prism/vs-dark.js": "https://esm.sh/react-syntax-highlighter@^15.6.6/dist/esm/styles/prism/vs-dark.js?external=react,react-dom",
+          "react-syntax-highlighter/dist/cjs/styles/prism/index.js": "https://esm.sh/react-syntax-highlighter@^15.6.6/dist/esm/styles/prism/index.js?external=react,react-dom",
+          "rehype-raw": "https://esm.sh/rehype-raw@^5.1.0?external=react,react-dom",
+          "rehype-react": "https://esm.sh/rehype-react@^6.2.1?external=react,react-dom",
+          "remark-parse": "https://esm.sh/remark-parse@^8.0.3?external=react,react-dom",
+          "remark-rehype": "https://esm.sh/remark-rehype@^7.0.0?external=react,react-dom",
+          "styled-components": "https://esm.sh/styled-components@^5.3.11?external=react,react-dom",
+          "styled-system": "https://esm.sh/styled-system@5.1.5?external=react,react-dom",
+          "unified": "https://esm.sh/unified@^9.2.2?external=react,react-dom",
+          "unist-util-visit": "https://esm.sh/unist-util-visit@^2.0.3?external=react,react-dom",
+          "use-resize-observer": "https://esm.sh/use-resize-observer@^9.1.0?external=react,react-dom"
+        }
+      }
+    </script>
+    <script type="module">
+      import React from 'react';
+      import { createRoot } from 'react-dom/client';
+      import { Deck, Slide, FlexBox, Box, Grid, Heading, Text, Notes, Appear, DefaultTemplate } from 'spectacle';
+      import htm from 'htm';
+      const html = htm.bind(React.createElement);
+
+      // Design tokens: ../design/tokens.css (OpenDesign corporate structure + Extol palette)
+      const theme = {
+        colors: { primary: '#101F14', secondary: '#1D3524', tertiary: '#E9F0C9', quaternary: '#9EBB80', quinary: '#7E9C6B' },
+        fonts: { header: 'Poppins, Helvetica, Arial, sans-serif', text: '"Open Sans", Helvetica, Arial, sans-serif', monospace: '"IBM Plex Mono", monospace' },
+        fontSizes: { h1: '58px', h2: '44px', h3: '30px', text: '24px', monospace: '18px' },
+        space: [8, 16, 24, 32, 48]
+      };
+      const C = theme.colors;
+      const FOOT = 'Extol Affiliates · Prepared for Amit Chavda · DigitalClinic.ai · Proposal';
+
+      const Kicker = ({ children, dark }) => html`<${Text} fontFamily="monospace" fontSize="16px" color=${dark ? C.quaternary : C.quinary} margin="0 0 8px" style=${{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>${children}</${Text}>`;
+      const Title = ({ children, dark }) => html`<${Heading} fontSize="h2" textAlign="left" margin="0 0 24px" color=${dark ? C.tertiary : C.primary} style=${{ lineHeight: 1.15, maxWidth: '1500px' }}>${children}</${Heading}>`;
+      const Card = ({ n, title, body, dark }) => html`
+        <${Box} padding="24px" backgroundColor=${dark ? C.secondary : '#F6F8EC'} style=${{ borderTop: '4px solid ' + C.quaternary, borderRadius: 4 }}>
+          ${n ? html`<${Text} fontFamily="monospace" fontSize="16px" color=${C.quinary} margin="0 0 8px">${n}</${Text}>` : null}
+          <${Text} fontFamily="header" fontSize="26px" fontWeight="600" margin="0 0 8px" color=${dark ? C.tertiary : C.primary}>${title}</${Text}>
+          <${Text} fontSize="20px" margin="0" color=${dark ? C.tertiary : C.primary} style=${{ lineHeight: 1.45 }}>${body}</${Text}>
+        </${Box}>`;
+      const Foot = ({ page, dark }) => html`<${FlexBox} justifyContent="space-between" style=${{ position: 'absolute', left: 48, right: 48, bottom: 24 }}>
+          <${Text} fontSize="14px" margin="0" color=${dark ? C.quaternary : C.quinary}>${FOOT}</${Text}>
+          <${Text} fontFamily="monospace" fontSize="14px" margin="0" color=${dark ? C.quaternary : C.quinary}>${page}</${Text}></${FlexBox}>`;
+      const Src = ({ children }) => html`<${Text} fontSize="14px" color=${C.quinary} margin="16px 0 0">Source: ${children}</${Text}>`;
+      const Callout = ({ children }) => html`<${Box} padding="16px 24px" backgroundColor=${C.secondary} margin="24px 0 0" style=${{ borderRadius: 4 }}><${Text} fontSize="20px" color=${C.tertiary} margin="0">${children}</${Text}></${Box}>`;
+      const Steps = ({ items }) => html`<${Grid} gridTemplateColumns=${`repeat(${items.length}, 1fr)`} gridColumnGap="16px">
+          ${items.map(([t, b, you], i) => html`<${Box} key=${i} padding="16px" backgroundColor=${you ? C.secondary : '#F6F8EC'} style=${{ borderRadius: 4, minHeight: 180 }}>
+            <${Text} fontFamily="monospace" fontSize="14px" color=${you ? C.quaternary : C.quinary} margin="0 0 8px">0${i + 1}${you ? ' · YOU' : ''}</${Text}>
+            <${Text} fontFamily="header" fontSize="24px" fontWeight="600" color=${you ? C.tertiary : C.primary} margin="0 0 8px">${t}</${Text}>
+            <${Text} fontSize="17px" color=${you ? C.tertiary : C.primary} margin="0" style=${{ lineHeight: 1.4 }}>${b}</${Text}></${Box}>`)}
+        </${Grid}>`;
+      const S = (props, children) => html`<${Slide} backgroundColor=${props.dark ? C.secondary : C.tertiary} padding="48px 48px 64px">${children}</${Slide}>`;
+
+      const Presentation = () => html`<${Deck} theme=${theme} template=${html`<${DefaultTemplate} color=${C.quinary} />`}>
+        ${S({ dark: true }, html`
+          <${Kicker} dark>Extol Affiliates · Proposal</${Kicker}>
+          <${Heading} fontSize="h1" textAlign="left" color=${C.tertiary} margin="24px 0 16px" style=${{ maxWidth: 1400, lineHeight: 1.1 }}>A founder voice NHS imaging buyers and investors already trust.</${Heading}>
+          <${Text} color=${C.quaternary} margin="0 0 48px">The founder-led marketing system for Amit Chavda and DigitalClinic.ai. <span style=${{ border: '1px dashed', padding: '0 8px' }}>[One line: what DigitalClinic.ai does]</span></${Text}>
+          <${Grid} gridTemplateColumns="repeat(3, 1fr)" gridColumnGap="24px" style=${{ maxWidth: 1200 }}>
+            ${[['19', 'years in UK imaging'], ['2', 'audiences: NHS buyers, investors'], ['1', 'approval a week']].map(([n, l]) => html`<${Box} key=${l} style=${{ borderTop: '2px solid ' + C.quaternary, paddingTop: 16 }}>
+              <${Text} fontFamily="header" fontSize="80px" fontWeight="700" color=${C.tertiary} margin="0">${n}</${Text}>
+              <${Text} fontSize="20px" color=${C.quaternary} margin="0">${l}</${Text}></${Box}>`)}
+          </${Grid}>
+          <${Foot} page="01" dark />
+          <${Notes}>Open on the credibility gap: buyers and investors back founders they already know. Amit already has the career; this makes it visible.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>Why Amit</${Kicker}>
+          <${Title}>Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.</${Title}>
+          <${Steps} items=${[
+            ['Clinic', '2007-2013 · Lead Radiographer, Brighton and Sussex University Hospital'],
+            ['NHS', '2014-2018 · NHS England and commissioning analytics'],
+            ['Vendor', '2018-now · Siemens Healthineers, Ergéa, Radiobotics'],
+            ['Industry voice', '2026-now · Vice Convenor, AXREM AI Special Focus Group', true]]} />
+          <${Callout}>Few AI founders have stood in the reading room, the commissioning meeting and the vendor pitch. That is DigitalClinic.ai's edge, and almost nobody outside his network sees it yet.</${Callout}>
+          <${Src}>LinkedIn work history via Apollo, October 2026. AXREM: UK trade association, 120+ member companies.</${Src}>
+          <${Foot} page="02" />
+          <${Notes}>Situation: 19 years from radiographer to AI founder. Each stage is a buyer or investor objection he can already answer.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>The goal</${Kicker}>
+          <${Title}>Two audiences, one voice: NHS buyers for pilots, investors for the raise.</${Title}>
+          <${Grid} gridTemplateColumns="1fr 1fr" gridColumnGap="24px">
+            <${Card} n="01" title="Qualified conversations with NHS imaging buyers" body="Radiology leads, PACS/IT and procurement see a founder who knows their workflow. Every post leads to a page and a tracked enquiry route." />
+            <${Card} n="02" title="Investor-ready credibility" body="A visible track record and audience that shortens diligence and warms investor introductions." />
+          </${Grid}>
+          <${Callout}>Founder first. The DigitalClinic.ai page amplifies. Radiobotics and AXREM content stays out.</${Callout}>
+          <${Foot} page="03" />
+          <${Notes}>Complication: a startup with no public voice starts every buyer and investor conversation cold. Resolution: founder-led content.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>How it works</${Kicker}>
+          <${Title}>One recording a week becomes a week of founder content.</${Title}>
+          <${Steps} items=${[
+            ['Record', 'One 30-min session: explainer, conversation or event debrief (format to agree)', true],
+            ['Edit', 'Full video and short clips'],
+            ['Package', 'LinkedIn posts, article, newsletter, investor update'],
+            ['Approve', 'One weekly review', true],
+            ['Publish', 'Every channel, scheduled'],
+            ['Learn', 'The numbers set next week']]} />
+          <${Text} fontSize="18px" color=${C.quinary} margin="16px 0 0">Dark steps are the only ones that need Amit.</${Text}>
+          <${Callout}>The DigitalClinic.ai website is home base. Every post points to a page about Amit, the product, an article or a demo request.</${Callout}>
+          <${Foot} page="04" />
+          <${Notes}>Amit appears twice a week: recording and one review. Everything else is Extol.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>The tools</${Kicker}>
+          <${Title}>The stack. One job each.</${Title}>
+          <table style=${{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Open Sans, sans-serif', fontSize: 20, color: C.primary }}>
+            <thead><tr style=${{ textAlign: 'left', fontFamily: 'IBM Plex Mono, monospace', fontSize: 14, color: C.quinary }}><th style=${{ padding: 8 }}>TOOL</th><th style=${{ padding: 8 }}>ITS JOB</th><th style=${{ padding: 8 }}>WHAT YOU GET</th></tr></thead>
+            <tbody>${[
+              ['ChatGPT', 'The writer behind everything', 'Scripts, posts, articles, newsletters and investor updates, drafted from your recordings'],
+              ['Higgsfield', 'Video quality', 'Clean edits, subtitles, motion and covers. Full videos plus vertical shorts'],
+              ['Apollo', 'Lists, outreach, newsletter', 'Targeted NHS imaging buyer and investor lists, outreach sequences, the newsletter'],
+              ['Bloggerly.ai', 'SEO and AI search', 'Articles that rank on Google and show up in AI answers'],
+              ['LinkedIn manager', 'Authority and conversations', 'Founder profile, posting and engagement in your voice; DigitalClinic.ai page amplifies']
+            ].map(r => html`<tr key=${r[0]} style=${{ borderTop: '1px solid ' + C.quinary }}><td style=${{ padding: '12px 8px', fontWeight: 700, fontFamily: 'Poppins, sans-serif' }}>${r[0]}</td><td style=${{ padding: '12px 8px' }}>${r[1]}</td><td style=${{ padding: '12px 8px' }}>${r[2]}</td></tr>`)}</tbody>
+          </table>
+          <${Text} fontSize="18px" color=${C.quinary} margin="16px 0 0">LinkedIn is the main channel for NHS and investor audiences. Full recordings go to YouTube; the newsletter doubles as the investor update.</${Text}>
+          <${Foot} page="05" />`)}
+
+        ${S({}, html`
+          <${Kicker}>An example</${Kicker}>
+          <${Title}>One topic becomes four assets for two audiences.</${Title}>
+          <${Box} padding="16px 24px" margin="0 0 24px" style=${{ border: '2px dashed ' + C.quinary, borderRadius: 4 }}>
+            <${Text} fontFamily="monospace" fontSize="16px" color=${C.quinary} margin="0">PLACEHOLDER · EXAMPLE TO BE PRODUCED FROM AMIT'S FIRST RECORDING</${Text}>
+            <${Text} fontFamily="header" fontSize="30px" color=${C.primary} margin="8px 0 0">Proposed topic: "What should an NHS imaging department ask before it buys AI?"</${Text}>
+          </${Box}>
+          <${Grid} gridTemplateColumns="repeat(4, 1fr)" gridColumnGap="16px">
+            <${Card} title="LinkedIn clip" body="60 seconds, subtitled. For buyers." />
+            <${Card} title="Search article" body="Ranks on Google and in AI answers. For buyers." />
+            <${Card} title="Newsletter" body="One section, sent via Apollo. For both." />
+            <${Card} title="Investor update" body="What buyers are asking this month. For investors." />
+          </${Grid}>
+          <${Foot} page="06" />
+          <${Notes}>Proposed topic only. Nothing is quoted or published; the real example replaces this after the first recording.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>Control and the first outcome</${Kicker}>
+          <${Title}>One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.</${Title}>
+          <${Grid} gridTemplateColumns="1.2fr 1fr" gridColumnGap="24px">
+            <${Box}>
+              <${Steps} items=${[['Build', 'The weekly pack'], ['Review', 'Claims, brand, links, once', true], ['Publish', 'Only approved items'], ['Learn', 'Views, clicks, enquiries, investor replies']]} />
+              <${Box} margin="16px 0 0" padding="16px" backgroundColor="#F6F8EC" style=${{ borderLeft: '4px solid ' + C.secondary }}>
+                <${Text} fontSize="18px" margin="0" color=${C.primary} style=${{ lineHeight: 1.5 }}>No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch.</${Text}>
+              </${Box}>
+            </${Box}>
+            <${Card} dark n="OUTCOME 01" title="The first qualified NHS buyer conversation that came from content." body="Target: a number we agree before we start. Proof: every enquiry traced to the post that sent it. Weekly output (proposed): 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter." />
+          </${Grid}>
+          <${Foot} page="07" />
+          <${Notes}>He is still employed at Radiobotics: separation is a feature, not a risk. The four-week pilot proves the first outcome.</${Notes}>`)}
+
+        ${S({ dark: true }, html`
+          <${Kicker} dark>Next</${Kicker}>
+          <${Title} dark>Six answers, then we price the pilot.</${Title}>
+          <${Grid} gridTemplateColumns="repeat(3, 1fr)" gridColumnGap="16px" gridRowGap="16px">
+            ${[['DigitalClinic.ai', 'What it does in one line, its stage, and are you raising now?'],
+               ['Audience', 'Which trusts, roles and investors, and where should each post send them?'],
+               ['Roles', 'What does your Radiobotics contract allow, and how do you disclose AXREM and DigitalClinic.ai?'],
+               ['Production', 'Can you record once a week, and in what style?'],
+               ['Access', 'Which accounts connect, and who handles enquiries?'],
+               ['Budget', 'What pilot budget and tool cap works for you?']].map(([t, b], i) => html`<${Card} key=${t} dark n=${'0' + (i + 1)} title=${t} body=${b} />`)}
+          </${Grid}>
+          <${Text} fontSize="18px" color=${C.quaternary} margin="24px 0 0">Price = fixed setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). Nothing publishes until you approve the complete pack.</${Text}>
+          <${Foot} page="08" dark />`)}
+      </${Deck}>`;
+
+      createRoot(document.getElementById('root')).render(html`<${Presentation} />`);
+    </script>
+  </body>
+</html>

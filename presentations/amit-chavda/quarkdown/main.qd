@@ -1,0 +1,213 @@
+.docname {Amit Chavda x Extol}
+.docauthor {Extol Affiliates}
+.doctype {slides}
+.doclang {English}
+.theme {paperwhite} layout:{minimal}
+.autopagebreak maxdepth:{1}
+.css {.read {styles.css}}
+
+.footer
+    Extol Affiliates · Prepared for Amit Chavda · DigitalClinic.ai · Proposal
+
+# A founder voice NHS imaging buyers and investors already trust.
+
+.text {Extol Affiliates · Proposal} classname:{kicker}
+
+The founder-led marketing system for Amit Chavda and DigitalClinic.ai.
+
+.container classname:{placeholder}
+    [One line: what DigitalClinic.ai does]
+
+.row gap:{1.5cm}
+    .container
+        .text {19} classname:{stat}
+
+        years in UK imaging
+    .container
+        .text {2} classname:{stat}
+
+        audiences: NHS buyers, investors
+    .container
+        .text {1} classname:{stat}
+
+        approval a week
+
+Prepared for Amit Chavda · London, October 2026
+
+.speakernote
+    Open on the credibility gap: buyers and investors back founders they already know. Amit already has the career; this makes it visible.
+
+# Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.
+
+.text {Why Amit} classname:{kicker}
+
+.grid columns:{4} gap:{12px}
+    .container classname:{card}
+        **Clinic** · 2007-2013
+
+        Lead Radiographer, Brighton and Sussex University Hospital
+    .container classname:{card}
+        **NHS** · 2014-2018
+
+        NHS England and commissioning analytics
+    .container classname:{card}
+        **Vendor** · 2018-now
+
+        Siemens Healthineers, Ergéa, Radiobotics
+    .container classname:{card you}
+        **Industry voice** · 2026-now
+
+        Vice Convenor, AXREM AI Special Focus Group
+
+.container classname:{callout}
+    Few AI founders have stood in the reading room, the commissioning meeting and the vendor pitch. That is DigitalClinic.ai's edge, and almost nobody outside his network sees it yet.
+
+.container classname:{source}
+    Source: LinkedIn work history via Apollo, October 2026. AXREM: UK trade association, 120+ member companies.
+
+# Two audiences, one voice: NHS buyers for pilots, investors for the raise.
+
+.text {The goal} classname:{kicker}
+
+.grid columns:{2} gap:{16px}
+    .container classname:{card}
+        **01 · Qualified conversations with NHS imaging buyers**
+
+        Radiology leads, PACS/IT and procurement see a founder who knows their workflow. Every post leads to a page and a tracked enquiry route.
+    .container classname:{card}
+        **02 · Investor-ready credibility**
+
+        A visible track record and audience that shortens diligence and warms investor introductions.
+
+.container classname:{callout}
+    Founder first. The DigitalClinic.ai page amplifies. Radiobotics and AXREM content stays out.
+
+.speakernote
+    Complication: a startup with no public voice starts every buyer and investor conversation cold.
+
+# One recording a week becomes a week of founder content.
+
+.text {How it works} classname:{kicker}
+
+.grid columns:{6} gap:{10px}
+    .container classname:{card you}
+        **01 Record**
+
+        One 30-min session (format to agree)
+    .container classname:{card}
+        **02 Edit**
+
+        Full video and short clips
+    .container classname:{card}
+        **03 Package**
+
+        Posts, article, newsletter, investor update
+    .container classname:{card you}
+        **04 Approve**
+
+        One weekly review
+    .container classname:{card}
+        **05 Publish**
+
+        Every channel, scheduled
+    .container classname:{card}
+        **06 Learn**
+
+        The numbers set next week
+
+.container classname:{callout}
+    Dark steps are the only ones that need Amit. The DigitalClinic.ai website is home base: every post points to a page about Amit, the product, an article or a demo request.
+
+# The stack. One job each.
+
+.text {The tools} classname:{kicker}
+
+| Tool | Its job | What you get |
+|------|---------|--------------|
+| **ChatGPT** | The writer behind everything | Scripts, posts, articles, newsletters and investor updates, drafted from your recordings |
+| **Higgsfield** | Video quality | Clean edits, subtitles, motion and covers. Full videos plus vertical shorts |
+| **Apollo** | Lists, outreach, newsletter | Targeted NHS imaging buyer and investor lists, outreach sequences, the newsletter |
+| **Bloggerly.ai** | SEO and AI search | Articles that rank on Google and show up in AI answers |
+| **LinkedIn manager** | Authority and conversations | Founder profile, posting and engagement in your voice; DigitalClinic.ai page amplifies |
+
+.container classname:{source}
+    LinkedIn is the main channel for NHS and investor audiences. Full recordings go to YouTube; the newsletter doubles as the investor update.
+
+# One topic becomes four assets for two audiences.
+
+.text {An example} classname:{kicker}
+
+.container classname:{placeholder}
+    .text {PLACEHOLDER · EXAMPLE TO BE PRODUCED FROM AMIT'S FIRST RECORDING} classname:{kicker}
+
+    Proposed topic: *"What should an NHS imaging department ask before it buys AI?"*
+
+.grid columns:{4} gap:{12px}
+    .container classname:{card}
+        **LinkedIn clip**
+
+        60 seconds, subtitled. For buyers.
+    .container classname:{card}
+        **Search article**
+
+        Ranks on Google and in AI answers. For buyers.
+    .container classname:{card}
+        **Newsletter**
+
+        One section, sent via Apollo. For both.
+    .container classname:{card}
+        **Investor update**
+
+        What buyers are asking this month. For investors.
+
+.speakernote
+    Proposed topic only. Nothing is quoted or published; the real example replaces this after the first recording.
+
+# One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.
+
+.text {Control and the first outcome} classname:{kicker}
+
+.grid columns:{2} gap:{16px}
+    .container classname:{card}
+        **1 Build** the weekly pack · **2 Review** claims, brand and links once · **3 Publish** only approved items · **4 Learn** from views, clicks, enquiries and investor replies.
+
+        No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch.
+    .container classname:{card dark}
+        **Outcome 01:** the first qualified NHS buyer conversation that came from content.
+
+        Target: a number we agree before we start. Proof: every enquiry traced to the post that sent it.
+
+        Weekly output (proposed): 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter.
+
+# Six answers, then we price the pilot.
+
+.text {Next} classname:{kicker}
+
+.grid columns:{3} gap:{12px}
+    .container classname:{card}
+        **01 DigitalClinic.ai**
+
+        What it does in one line, its stage, and are you raising now?
+    .container classname:{card}
+        **02 Audience**
+
+        Which trusts, roles and investors, and where should each post send them?
+    .container classname:{card}
+        **03 Roles**
+
+        What does your Radiobotics contract allow, and how do you disclose AXREM and DigitalClinic.ai?
+    .container classname:{card}
+        **04 Production**
+
+        Can you record once a week, and in what style?
+    .container classname:{card}
+        **05 Access**
+
+        Which accounts connect, and who handles enquiries?
+    .container classname:{card}
+        **06 Budget**
+
+        What pilot budget and tool cap works for you?
+
+.container classname:{callout}
+    Price = fixed setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). Nothing publishes until you approve the complete pack.

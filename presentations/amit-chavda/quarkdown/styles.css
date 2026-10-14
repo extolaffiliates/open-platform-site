@@ -1,0 +1,12 @@
+/* Extol palette + OpenDesign corporate structure (see ../design/tokens.css) */
+:root { --qd-background-color: #E9F0C9; --qd-main-color: #101F14; --qd-heading-color: #101F14; --qd-link-color: #2B4A34; }
+.reveal, body { background: #E9F0C9; color: #101F14; font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+h1, h2, h3 { font-family: Poppins, Helvetica, Arial, sans-serif; color: #101F14; text-align: left; line-height: 1.15; }
+.kicker { font-family: "IBM Plex Mono", monospace; font-size: 0.55em; letter-spacing: .12em; text-transform: uppercase; color: #7E9C6B; }
+.card { background: #F6F8EC; border-top: 4px solid #9EBB80; border-radius: 4px; padding: 16px; font-size: .62em; text-align: left; }
+.card.you, .card.dark { background: #1D3524; color: #E9F0C9; }
+.callout { background: #1D3524; color: #E9F0C9; border-radius: 4px; padding: 12px 20px; font-size: .6em; text-align: left; }
+.placeholder { border: 2px dashed #7E9C6B; padding: 12px 20px; border-radius: 4px; text-align: left; }
+.source { font-size: .45em; color: #7E9C6B; text-align: left; }
+.stat { font-family: Poppins, sans-serif; font-size: 2.4em; font-weight: 700; color: #1D3524; }
+table { font-size: .55em; }
