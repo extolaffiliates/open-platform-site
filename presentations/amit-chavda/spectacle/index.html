@@ -7,7 +7,7 @@
     <title>Amit Chavda x Extol</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
-    <style>body{margin:0;background:#E9F0C9}</style>
+    <style>body{margin:0;background:#EDE9DC}</style>
   </head>
   <body>
     <div id="root"></div>
@@ -58,7 +58,7 @@
 
       // Design tokens: ../design/tokens.css (OpenDesign corporate structure + Extol palette)
       const theme = {
-        colors: { primary: '#101F14', secondary: '#1D3524', tertiary: '#E9F0C9', quaternary: '#9EBB80', quinary: '#7E9C6B' },
+        colors: { primary: '#1D2A1B', secondary: '#0C1A11', tertiary: '#EDE9DC', quaternary: '#C6DE93', quinary: '#55703A' },
         fonts: { header: 'Poppins, Helvetica, Arial, sans-serif', text: '"Open Sans", Helvetica, Arial, sans-serif', monospace: '"IBM Plex Mono", monospace' },
         fontSizes: { h1: '58px', h2: '44px', h3: '30px', text: '24px', monospace: '18px' },
         space: [8, 16, 24, 32, 48]
@@ -69,7 +69,7 @@
       const Kicker = ({ children, dark }) => html`<${Text} fontFamily="monospace" fontSize="16px" color=${dark ? C.quaternary : C.quinary} margin="0 0 8px" style=${{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>${children}</${Text}>`;
       const Title = ({ children, dark }) => html`<${Heading} fontSize="h2" textAlign="left" margin="0 0 24px" color=${dark ? C.tertiary : C.primary} style=${{ lineHeight: 1.15, maxWidth: '1500px' }}>${children}</${Heading}>`;
       const Card = ({ n, title, body, dark }) => html`
-        <${Box} padding="24px" backgroundColor=${dark ? C.secondary : '#F6F8EC'} style=${{ borderTop: '4px solid ' + C.quaternary, borderRadius: 4 }}>
+        <${Box} padding="24px" backgroundColor=${dark ? C.secondary : '#E4DFCE'} style=${{ borderTop: '4px solid ' + C.quaternary, borderRadius: 4 }}>
           ${n ? html`<${Text} fontFamily="monospace" fontSize="16px" color=${C.quinary} margin="0 0 8px">${n}</${Text}>` : null}
           <${Text} fontFamily="header" fontSize="26px" fontWeight="600" margin="0 0 8px" color=${dark ? C.tertiary : C.primary}>${title}</${Text}>
           <${Text} fontSize="20px" margin="0" color=${dark ? C.tertiary : C.primary} style=${{ lineHeight: 1.45 }}>${body}</${Text}>
@@ -80,7 +80,7 @@
       const Src = ({ children }) => html`<${Text} fontSize="14px" color=${C.quinary} margin="16px 0 0">Source: ${children}</${Text}>`;
       const Callout = ({ children }) => html`<${Box} padding="16px 24px" backgroundColor=${C.secondary} margin="24px 0 0" style=${{ borderRadius: 4 }}><${Text} fontSize="20px" color=${C.tertiary} margin="0">${children}</${Text}></${Box}>`;
       const Steps = ({ items }) => html`<${Grid} gridTemplateColumns=${`repeat(${items.length}, 1fr)`} gridColumnGap="16px">
-          ${items.map(([t, b, you], i) => html`<${Box} key=${i} padding="16px" backgroundColor=${you ? C.secondary : '#F6F8EC'} style=${{ borderRadius: 4, minHeight: 180 }}>
+          ${items.map(([t, b, you], i) => html`<${Box} key=${i} padding="16px" backgroundColor=${you ? C.secondary : '#E4DFCE'} style=${{ borderRadius: 4, minHeight: 180 }}>
             <${Text} fontFamily="monospace" fontSize="14px" color=${you ? C.quaternary : C.quinary} margin="0 0 8px">0${i + 1}${you ? ' · YOU' : ''}</${Text}>
             <${Text} fontFamily="header" fontSize="24px" fontWeight="600" color=${you ? C.tertiary : C.primary} margin="0 0 8px">${t}</${Text}>
             <${Text} fontSize="17px" color=${you ? C.tertiary : C.primary} margin="0" style=${{ lineHeight: 1.4 }}>${b}</${Text}></${Box}>`)}
@@ -97,7 +97,7 @@
               <${Text} fontFamily="header" fontSize="80px" fontWeight="700" color=${C.tertiary} margin="0">${n}</${Text}>
               <${Text} fontSize="20px" color=${C.quaternary} margin="0">${l}</${Text}></${Box}>`)}
           </${Grid}>
-          <${Foot} page="01" dark />
+          <${Foot} page="01 / 10" dark />
           <${Notes}>Open on the credibility gap: buyers and investors back founders they already know. Amit already has the career; this makes it visible.</${Notes}>`)}
 
         ${S({}, html`
@@ -110,8 +110,21 @@
             ['Industry voice', '2026-now · Vice Convenor, AXREM AI Special Focus Group', true]]} />
           <${Callout}>Few AI founders have stood in the reading room, the commissioning meeting and the vendor pitch. That is DigitalClinic.ai's edge, and almost nobody outside his network sees it yet.</${Callout}>
           <${Src}>LinkedIn work history via Apollo, October 2026. AXREM: UK trade association, 120+ member companies.</${Src}>
-          <${Foot} page="02" />
+          <${Foot} page="02 / 10" />
           <${Notes}>Situation: 19 years from radiographer to AI founder. Each stage is a buyer or investor objection he can already answer.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>Same event, same gap</${Kicker}>
+          <${Title}>Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.</${Title}>
+          <${Grid} gridTemplateColumns="1fr 1fr 1fr" gridColumnGap="16px">
+            <${Card} n="WHO" title="Dr Uche Nnene FCCA" body="Co-founder, Effectivepoint. Former EY partner. ERP, Finance and AI transformation for CFOs. Met at [Event name]." />
+            <${Card} n="THE SHARED GAP" title="Expertise buyers can't see" body="Deep expertise and named results live in the work, not where senior buyers look. CFOs and NHS imaging leaders both pick people they already know." />
+            <${Card} dark n="THE APPROACH WE'VE PUT TO THEM" title="Watch · Draft · Approve · Publish · Measure" body="Agents watch buyers' posts and draft comments and proof posts in the founder's voice; the founder approves each in a minute. First outcome: one Finance Director conversation started on LinkedIn." />
+          </${Grid}>
+          <${Callout}>For Amit: the same buyer-comment engine on NHS imaging leaders' posts, alongside the weekly recording.</${Callout}>
+          <${Src}>Effectivepoint named with permission [confirm with Uche before sending].</${Src}>
+          <${Foot} page="03 / 10" />
+          <${Notes}>We met them in the same room and the pattern is identical. Share the approach, never the other client's numbers.</${Notes}>`)}
 
         ${S({}, html`
           <${Kicker}>The goal</${Kicker}>
@@ -121,7 +134,7 @@
             <${Card} n="02" title="Investor-ready credibility" body="A visible track record and audience that shortens diligence and warms investor introductions." />
           </${Grid}>
           <${Callout}>Founder first. The DigitalClinic.ai page amplifies. Radiobotics and AXREM content stays out.</${Callout}>
-          <${Foot} page="03" />
+          <${Foot} page="04 / 10" />
           <${Notes}>Complication: a startup with no public voice starts every buyer and investor conversation cold. Resolution: founder-led content.</${Notes}>`)}
 
         ${S({}, html`
@@ -136,8 +149,25 @@
             ['Learn', 'The numbers set next week']]} />
           <${Text} fontSize="18px" color=${C.quinary} margin="16px 0 0">Dark steps are the only ones that need Amit.</${Text}>
           <${Callout}>The DigitalClinic.ai website is home base. Every post points to a page about Amit, the product, an article or a demo request.</${Callout}>
-          <${Foot} page="04" />
+          <${Foot} page="05 / 10" />
           <${Notes}>Amit appears twice a week: recording and one review. Everything else is Extol.</${Notes}>`)}
+
+        ${S({}, html`
+          <${Kicker}>Running today</${Kicker}>
+          <${Title}>The engine already runs: four Extol agents, each with a sourced result.</${Title}>
+          <${Grid} gridTemplateColumns="repeat(4, 1fr)" gridColumnGap="16px">
+            ${[['40%', 'LinkedIn Manager', 'of invites accepted across 25 live personal brand campaigns. A personal note for every request.'],
+               ['+326.2%', 'AI Social Media Manager', 'LinkedIn impressions over 90 days. One approval click in Slack per post.'],
+               ['57.4%', 'Lead Magnet Agent', 'open rate across 61 sequences. One email written for one business.'],
+               ['2 min', 'Finance Handler Agent', 'from call transcript to priced proposal, down from 2 days.']].map(([n, t, b]) => html`<${Box} key=${t} padding="24px" backgroundColor="#E4DFCE" style=${{ borderTop: '4px solid ' + C.quinary, borderRadius: 4 }}>
+              <${Text} fontFamily="header" fontSize="56px" fontWeight="700" color=${C.primary} margin="0 0 8px">${n}</${Text}>
+              <${Text} fontFamily="header" fontSize="22px" fontWeight="600" color=${C.primary} margin="0 0 8px">${t}</${Text}>
+              <${Text} fontSize="18px" color=${C.primary} margin="0" style=${{ lineHeight: 1.45 }}>${b}</${Text}></${Box}>`)}
+          </${Grid}>
+          <${Callout}>Fixed price, agreed up front. Built in your accounts; you own everything. No lock-in.</${Callout}>
+          <${Src}>extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly dashboard 29 Mar to 29 Apr 2026.</${Src}>
+          <${Foot} page="06 / 10" />
+          <${Notes}>Proof that the pieces already work. Amit's version reuses the LinkedIn Manager and the Social Media Manager directly.</${Notes}>`)}
 
         ${S({}, html`
           <${Kicker}>The tools</${Kicker}>
@@ -153,7 +183,7 @@
             ].map(r => html`<tr key=${r[0]} style=${{ borderTop: '1px solid ' + C.quinary }}><td style=${{ padding: '12px 8px', fontWeight: 700, fontFamily: 'Poppins, sans-serif' }}>${r[0]}</td><td style=${{ padding: '12px 8px' }}>${r[1]}</td><td style=${{ padding: '12px 8px' }}>${r[2]}</td></tr>`)}</tbody>
           </table>
           <${Text} fontSize="18px" color=${C.quinary} margin="16px 0 0">LinkedIn is the main channel for NHS and investor audiences. Full recordings go to YouTube; the newsletter doubles as the investor update.</${Text}>
-          <${Foot} page="05" />`)}
+          <${Foot} page="07 / 10" />`)}
 
         ${S({}, html`
           <${Kicker}>An example</${Kicker}>
@@ -168,7 +198,7 @@
             <${Card} title="Newsletter" body="One section, sent via Apollo. For both." />
             <${Card} title="Investor update" body="What buyers are asking this month. For investors." />
           </${Grid}>
-          <${Foot} page="06" />
+          <${Foot} page="08 / 10" />
           <${Notes}>Proposed topic only. Nothing is quoted or published; the real example replaces this after the first recording.</${Notes}>`)}
 
         ${S({}, html`
@@ -177,13 +207,13 @@
           <${Grid} gridTemplateColumns="1.2fr 1fr" gridColumnGap="24px">
             <${Box}>
               <${Steps} items=${[['Build', 'The weekly pack'], ['Review', 'Claims, brand, links, once', true], ['Publish', 'Only approved items'], ['Learn', 'Views, clicks, enquiries, investor replies']]} />
-              <${Box} margin="16px 0 0" padding="16px" backgroundColor="#F6F8EC" style=${{ borderLeft: '4px solid ' + C.secondary }}>
-                <${Text} fontSize="18px" margin="0" color=${C.primary} style=${{ lineHeight: 1.5 }}>No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch.</${Text}>
+              <${Box} margin="16px 0 0" padding="16px" backgroundColor="#E4DFCE" style=${{ borderLeft: '4px solid ' + C.secondary }}>
+                <${Text} fontSize="18px" margin="0" color=${C.primary} style=${{ lineHeight: 1.5 }}>No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch. Everything runs in Amit's own accounts; he owns every account, credential and file.</${Text}>
               </${Box}>
             </${Box}>
             <${Card} dark n="OUTCOME 01" title="The first qualified NHS buyer conversation that came from content." body="Target: a number we agree before we start. Proof: every enquiry traced to the post that sent it. Weekly output (proposed): 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter." />
           </${Grid}>
-          <${Foot} page="07" />
+          <${Foot} page="09 / 10" />
           <${Notes}>He is still employed at Radiobotics: separation is a feature, not a risk. The four-week pilot proves the first outcome.</${Notes}>`)}
 
         ${S({ dark: true }, html`
@@ -197,8 +227,8 @@
                ['Access', 'Which accounts connect, and who handles enquiries?'],
                ['Budget', 'What pilot budget and tool cap works for you?']].map(([t, b], i) => html`<${Card} key=${t} dark n=${'0' + (i + 1)} title=${t} body=${b} />`)}
           </${Grid}>
-          <${Text} fontSize="18px" color=${C.quaternary} margin="24px 0 0">Price = fixed setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). Nothing publishes until you approve the complete pack.</${Text}>
-          <${Foot} page="08" dark />`)}
+          <${Text} fontSize="18px" color=${C.quaternary} margin="24px 0 0">Fixed price, agreed up front: setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). You own everything. Nothing publishes until you approve the complete pack.</${Text}>
+          <${Foot} page="10 / 10" dark />`)}
       </${Deck}>`;
 
       createRoot(document.getElementById('root')).render(html`<${Presentation} />`);

@@ -1,20 +1,20 @@
 /* Design direction for the Amit Chavda deck.
-   Structure: OpenDesign design-systems/corporate (enterprise grid, 8pt baseline, display + text + mono families).
-   Colour: Extol Affiliates palette replaces corporate blue/purple (anthropic-skills:extolaffiliatescolours). */
+   Structure: OpenDesign design-systems/corporate (enterprise grid, 8pt baseline).
+   Colour: Extol brand tokens from extolaffiliates/website DESIGN.md §04 (certified; supersedes the approximate palette). */
 :root {
-  --deep-forest: #101F14;   /* text on light, darkest anchor */
-  --pine:        #1D3524;   /* dark slides, chrome */
-  --forest:      #2B4A34;   /* dark cards */
-  --moss:        #7E9C6B;   /* rules, secondary emphasis */
-  --sage:        #9EBB80;   /* accent: the one series that matters */
-  --pistachio:   #C6DE9F;   /* subtle fills, tags */
-  --cream:       #E9F0C9;   /* page background */
-  --paper:       #F6F8EC;   /* card surface on cream */
+  --field-top:    #0C1A11;  /* deepest forest: dark slides */
+  --field-mid:    #1B3A22;  /* dark cards */
+  --field-bottom: #25482A;  /* dark card alt */
+  --oat:          #EDE9DC;  /* page: warm, never white */
+  --oat-2:        #E4DFCE;  /* card surface on oat */
+  --forest:       #1D2A1B;  /* ink on oat: never black */
+  --bone:         #EAE7DA;  /* ink on dark */
+  --moss:         #C6DE93;  /* accent on dark */
+  --fern:         #55703A;  /* accent on light */
 
+  /* Website face is Oranienbaum (one weight). Decks keep a sans for dense slides, as in Effectivepoint_x_Extol. */
   --font-display: "Poppins", "Helvetica Neue", Arial, sans-serif;
   --font-text:    "Open Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono:    "IBM Plex Mono", ui-monospace, monospace;
-
-  --space: 8px;             /* 8pt baseline grid */
-  --radius: 4px;
+  --space: 8px;
 }

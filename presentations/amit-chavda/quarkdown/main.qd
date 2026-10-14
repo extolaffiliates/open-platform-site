@@ -65,6 +65,33 @@ Prepared for Amit Chavda · London, October 2026
 .container classname:{source}
     Source: LinkedIn work history via Apollo, October 2026. AXREM: UK trade association, 120+ member companies.
 
+# Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.
+
+.text {Same event, same gap} classname:{kicker}
+
+.grid columns:{3} gap:{12px}
+    .container classname:{card}
+        **Who · Dr Uche Nnene FCCA**
+
+        Co-founder, Effectivepoint. Former EY partner. ERP, Finance and AI transformation for CFOs. Met at [Event name].
+    .container classname:{card}
+        **The shared gap · expertise buyers can't see**
+
+        Deep expertise and named results live in the work, not where senior buyers look. CFOs and NHS imaging leaders both pick people they already know.
+    .container classname:{card dark}
+        **The approach we've put to them**
+
+        Watch buyers' posts · Draft comments and proof posts in the founder's voice · Approve, a minute each · Publish · Measure. First outcome: one Finance Director conversation started on LinkedIn.
+
+.container classname:{callout}
+    For Amit: the same buyer-comment engine on NHS imaging leaders' posts, alongside the weekly recording.
+
+.container classname:{source}
+    Effectivepoint named with permission [confirm with Uche before sending].
+
+.speakernote
+    We met them in the same room and the pattern is identical. Share the approach, never the other client's numbers.
+
 # Two audiences, one voice: NHS buyers for pilots, investors for the raise.
 
 .text {The goal} classname:{kicker}
@@ -117,6 +144,34 @@ Prepared for Amit Chavda · London, October 2026
 
 .container classname:{callout}
     Dark steps are the only ones that need Amit. The DigitalClinic.ai website is home base: every post points to a page about Amit, the product, an article or a demo request.
+
+# The engine already runs: four Extol agents, each with a sourced result.
+
+.text {Running today} classname:{kicker}
+
+.grid columns:{4} gap:{12px}
+    .container classname:{card}
+        .text {40%} classname:{stat}
+
+        **LinkedIn Manager.** Invites accepted across 25 live personal brand campaigns.
+    .container classname:{card}
+        .text {+326.2%} classname:{stat}
+
+        **AI Social Media Manager.** LinkedIn impressions over 90 days, one approval click per post.
+    .container classname:{card}
+        .text {57.4%} classname:{stat}
+
+        **Lead Magnet Agent.** Open rate across 61 sequences.
+    .container classname:{card}
+        .text {2 min} classname:{stat}
+
+        **Finance Handler Agent.** Call transcript to priced proposal, down from 2 days.
+
+.container classname:{callout}
+    Fixed price, agreed up front. Built in your accounts; you own everything. No lock-in.
+
+.container classname:{source}
+    Source: extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly dashboard 29 Mar to 29 Apr 2026.
 
 # The stack. One job each.
 
@@ -171,7 +226,7 @@ Prepared for Amit Chavda · London, October 2026
     .container classname:{card}
         **1 Build** the weekly pack · **2 Review** claims, brand and links once · **3 Publish** only approved items · **4 Learn** from views, clicks, enquiries and investor replies.
 
-        No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch.
+        No Radiobotics products, customers or pipeline. AXREM positions only once AXREM has published them. Clinical, regulatory and performance claims need explicit sign-off. Check the Radiobotics contract and conflict-of-interest policy before launch. Everything runs in Amit's own accounts; he owns every account, credential and file.
     .container classname:{card dark}
         **Outcome 01:** the first qualified NHS buyer conversation that came from content.
 
@@ -210,4 +265,4 @@ Prepared for Amit Chavda · London, October 2026
         What pilot budget and tool cap works for you?
 
 .container classname:{callout}
-    Price = fixed setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). Nothing publishes until you approve the complete pack.
+    Fixed price, agreed up front: setup + monthly operation + capped tools (ChatGPT, Higgsfield, Apollo; Bloggerly.ai at no tool cost). You own everything. Nothing publishes until you approve the complete pack.

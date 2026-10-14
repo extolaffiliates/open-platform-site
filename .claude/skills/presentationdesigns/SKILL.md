@@ -16,6 +16,8 @@ Run `QUICK=1 presentation-toolkit/install.sh` if any of these are missing: `~/.c
 - **Source deck** (remakes): read it with Google Drive `read_file_content`; keep its structure, tool stack, control/approval logic and close unless the new audience needs otherwise.
 - **Who it is for**: search Drive and Gmail first; then Apollo `apollo_people_match` with their LinkedIn URL (LinkedIn itself is blocked from the cloud container). Paid enrichment beyond a standard match (company enrich, phone, waterfall) needs the user's OK first.
 - **Their company / startup, goal, audiences, what is already live, raw content they can supply**: one `AskUserQuestion` round for the gaps.
+- **Extol's own facts** come from the website repo `extolaffiliates/website` (attach with `add_repo`; extol.si itself is blocked from the container): `llms.txt` for positioning, principles and case studies with sourced numbers; `DESIGN.md` §04 for certified brand colours; `assets/img/logo-512.png` for the mark; `portfolio/index.html` for the portfolio deck. Add a proof slide from these case studies to every proposal.
+- **Other prospects' decks are confidential.** When a deck references another prospect or client (e.g. "met at the same event"), use public facts and the approach only, never their metrics or our analysis of them, describe proposals as proposals (not results), and add a `[confirm with <name> before sending]` placeholder.
 - Never invent facts, quotes, numbers or product claims. Unknowns become visible `[bracketed placeholders]` on the slide and in the README "Still to fill" list.
 - Regulated or employed people (health, finance, someone with an employer): add a guardrails slide covering what they cannot say and who signs off.
 
@@ -23,7 +25,7 @@ Run `QUICK=1 presentation-toolkit/install.sh` if any of these are missing: `~/.c
 Write `storyline.md` first: frame (question, audience, decision, governing thought), facts used with sources, placeholders, ghost deck of action titles, then per-slide content and speaker notes. Every renderer copies from this file; change content here, not in one renderer.
 
 ## 3. Design direction (OpenDesign)
-`design/tokens.css` + `design/README.md`: structure from `~/tools/open-design/design-systems/<system>` (default `corporate`), colours from `anthropic-skills:extolaffiliatescolours` for Extol work (Deep Forest `#101F14` text, Pine `#1D3524` dark, Sage `#9EBB80` accent, Cream `#E9F0C9` page). For charts use OpenDesign `frame-data-chart-nyt` / `data-report` and the `dataviz` skill.
+`design/tokens.css` + `design/README.md`: structure from `~/tools/open-design/design-systems/<system>` (default `corporate`), colours from `extolaffiliates/website` DESIGN.md §04 for Extol work (Oat `#EDE9DC` page, Oat 2 `#E4DFCE` cards, Forest `#1D2A1B` ink, field-top `#0C1A11` dark slides, Moss `#C6DE93` accent on dark, Fern `#55703A` accent on light); these supersede the approximate `extolaffiliatescolours` skill. Copy `presentations/amit-chavda/design/` (tokens + transparent logo marks) as the starting point. For charts use OpenDesign `frame-data-chart-nyt` / `data-report` and the `dataviz` skill.
 
 ## 4. Render all five
 | Output | How |

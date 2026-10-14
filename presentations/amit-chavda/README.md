@@ -13,9 +13,16 @@ One storyline, five renderings, per the toolkit rule in `CLAUDE.md`.
 | `pptx/Amit_Chavda_x_Extol.pptx` | python-pptx (`build_pptx.py`) | PowerPoint / Google Slides (editable) |
 
 ## Still to fill (left as visible placeholders, nothing invented)
+0. `[Event name]` where we met Amit and Uche, and Uche's OK to name Effectivepoint on slide 3.
 1. One line on what DigitalClinic.ai does, its stage and whether it is raising.
 2. Slide 6 example clip (from Amit's first recording).
 3. Pilot target number and price.
+
+## v2 (10 slides)
+- Slide 3 "Same room": Uche Nnene / Effectivepoint, met at the same event; public facts and the approach only, no Effectivepoint metrics (that document is confidential to them, and a proposal, not results).
+- Slide 6 "Proof": four Extol case studies with sourced numbers from extol.si (`extolaffiliates/website` llms.txt).
+- Extol principles added: fixed price, client owns everything, no lock-in.
+- Colours switched to the certified brand tokens in `extolaffiliates/website` DESIGN.md; real logo mark in `design/`.
 
 ## Changed from the Ismael deck
 - Goal: client enquiries + Skool community became NHS imaging buyers (pilots) + investors (the raise); Skool removed.
