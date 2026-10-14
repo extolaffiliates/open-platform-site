@@ -1284,6 +1284,18 @@
   .q .qk{display:block;font-family:var(--sans);font-weight:500;font-size:max(18px,1.1vw);line-height:1.25;color:var(--accent);margin-bottom:.5vh}
   .q .qv{display:block;font-family:var(--sans);font-weight:400;font-size:max(16px,.95vw);line-height:1.45;color:var(--text-secondary)}
 
+  /* S20 before-our-view ledger: noticed (muted, small) -> question (emphasis) */
+  .bv-sub{font-family:var(--sans);font-weight:400;font-size:max(18px,1.1vw);line-height:1.45;color:var(--text-secondary);max-width:72ch;margin-top:18px}
+  .bv-ledger{display:flex;flex-direction:column;min-height:0;border-top:2px solid var(--fern)}
+  .bv-head,.bv-ledger .ledger-row{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:32px}
+  .bv-pair,.bv-ledger .ledger-label{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,9fr);column-gap:32px;align-items:center}
+  .bv-head{padding:10px 0;border-bottom:1px solid var(--border-strong);font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-helper)}
+  .bv-ledger .ledger-row{flex:1;align-items:center;padding:12px 0;border-bottom:1px solid var(--border-subtle);min-height:0}
+  .bv-ledger .ledger-row:last-child{border-bottom:none}
+  .bv-ledger .ledger-num{font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:1;letter-spacing:-.03em;color:var(--fern);font-feature-settings:"tnum"}
+  .bv-noticed{font-family:var(--sans);font-weight:400;font-size:max(16px,.9vw);line-height:1.4;color:var(--text-helper)}
+  .bv-q{font-family:var(--sans);font-weight:500;font-size:min(1.45vw,2.6vh);line-height:1.3;letter-spacing:-.01em;color:var(--text-primary)}
+
   /* Extol certified theme: dark slides on field-top, dark cards on field-mid, fern accents on light */
   .slide.dark .canvas-card,.split-half > .half.b-ink,.stack-block.b-ink{background:var(--accent);color:var(--accent-on)}
   .slide.dark .sub-card{background:var(--card-dark)}
@@ -1363,7 +1375,7 @@
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
       <div class="l">Amit Chavda × Extol</div>
-      <div class="r">London · October 2026 · 01 / 10</div>
+      <div class="r">London · October 2026 · 01 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto auto 1fr;gap:3vh;min-height:0">
       <div data-anim="kicker" class="t-meta" style="color:rgba(var(--accent-on-rgb),.78);letter-spacing:.22em">Extol Affiliates · Proposal</div>
@@ -1383,12 +1395,57 @@
   </div>
 </section>
 
-<!-- 02 · Why Amit · S11 Horizontal Timeline -->
+<!-- 02 · Before our view · S20 Stacked KPI Ledger (six hairline rows: number / what we noticed / the question; icons omitted so the questions carry the slide) -->
+<section class="slide light" data-layout="S20" data-animate="stacked-ledger" data-slide-id="before-our-view">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">Before our view · Questions first</div>
+      <div class="r">02 / 11</div>
+    </div>
+    <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:28px;min-height:0">
+      <div data-anim="line" style="display:flex;flex-direction:column;gap:14px">
+        <div class="t-cat">Before our view</div>
+        <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(3.2vw,5.7vh);line-height:1.04;letter-spacing:-.03em;max-width:40ch">What we think is going on. Tell us where we're wrong.</h2>
+        <p class="bv-sub">Six questions, each from something we noticed. Your answers decide what we build.</p>
+      </div>
+      <div class="stacked-ledger bv-ledger" data-anim="ledger">
+        <div class="bv-head" aria-hidden="true"><span>No.</span><span class="bv-pair"><span>What we noticed</span><span>The question</span></span></div>
+        <div class="ledger-row">
+          <div class="ledger-num">01</div>
+          <div class="ledger-label"><span class="bv-noticed">You sell AI to the NHS by day at Radiobotics and are building DigitalClinic.ai alongside it.</span><span class="bv-q">Where does Radiobotics end and DigitalClinic.ai begin, and who has to agree where that line sits?</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-num">02</div>
+          <div class="ledger-label"><span class="bv-noticed">You have been the radiographer, the commissioner and the vendor.</span><span class="bv-q">When an NHS imaging lead hasn't met you, why would they pilot a startup over a vendor they already buy from?</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-num">03</div>
+          <div class="ledger-label"><span class="bv-noticed">You now help shape AXREM's view on AI in imaging.</span><span class="bv-q">Which of your views can you say in public, and which belong to AXREM?</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-num">04</div>
+          <div class="ledger-label"><span class="bv-noticed">An NHS AI purchase passes radiology, IT, procurement and finance.</span><span class="bv-q">Who says yes to a DigitalClinic.ai pilot, and who has the problem first?</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-num">05</div>
+          <div class="ledger-label"><span class="bv-noticed">Investors back traction, not CVs.</span><span class="bv-q">What does an investor need to see before the first cheque: pilots, letters of intent, or an audience that listens?</span></div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-num">06</div>
+          <div class="ledger-label"><span class="bv-noticed">Followers don't pay. Pilots and cheques do.</span><span class="bv-q">What is one NHS pilot worth to you, and how many conversations does it take to land one?</span></div>
+        </div>
+      </div>
+      <div class="src-line">Discussion document · Public work history (LinkedIn via Apollo), Oct 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · Why Amit · S11 Horizontal Timeline -->
 <section class="slide light" data-layout="S11" data-animate="timeline-walk" data-slide-id="why-amit">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Why Amit · Situation</div>
-      <div class="r">02 / 10</div>
+      <div class="r">03 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:3vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1423,12 +1480,12 @@
   </div>
 </section>
 
-<!-- 03 · Same room · S05 Three Layers (top-left title, three blocks: who / shared gap / approach) -->
+<!-- 04 · Same room · S05 Three Layers (top-left title, three blocks: who / shared gap / approach) -->
 <section class="slide light" data-layout="S05" data-animate="stack-build" data-slide-id="same-room">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Same room · Complication</div>
-      <div class="r">03 / 10</div>
+      <div class="r">04 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:32px;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1467,12 +1524,12 @@
   </div>
 </section>
 
-<!-- 04 · Goal · S08 Duo Compare -->
+<!-- 05 · Goal · S08 Duo Compare -->
 <section class="slide light" data-layout="S08" data-animate="duo-mirror" data-slide-id="goal">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Goal · Resolution</div>
-      <div class="r">04 / 10</div>
+      <div class="r">05 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1502,12 +1559,12 @@
   </div>
 </section>
 
-<!-- 05 · How it works · S14 Loop Form (left steps, right geometric loop; labels in HTML) -->
+<!-- 06 · How it works · S14 Loop Form (left steps, right geometric loop; labels in HTML) -->
 <section class="slide dark" data-layout="S14" data-animate="loop-form" data-slide-id="how-it-works">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">How it works · Weekly loop</div>
-      <div class="r">05 / 10</div>
+      <div class="r">06 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:3.4vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1554,12 +1611,12 @@
   </div>
 </section>
 
-<!-- 06 · Proof · S19 Four Cards (top rule + four equal columns, one sourced result each) -->
+<!-- 07 · Proof · S19 Four Cards (top rule + four equal columns, one sourced result each) -->
 <section class="slide light" data-layout="S19" data-animate="four-cards" data-slide-id="proof">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Proof · Running today</div>
-      <div class="r">06 / 10</div>
+      <div class="r">07 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:2.4vh">
@@ -1611,12 +1668,12 @@
   </div>
 </section>
 
-<!-- 07 · Tools · S04 Six Cells (five tools + one channel cell) -->
+<!-- 08 · Tools · S04 Six Cells (five tools + one channel cell) -->
 <section class="slide light" data-layout="S04" data-animate="grid-reveal" data-slide-id="tools">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Tools · The stack</div>
-      <div class="r">07 / 10</div>
+      <div class="r">08 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1635,12 +1692,12 @@
   </div>
 </section>
 
-<!-- 08 · Example · S16 Multi-card Brief (3 x 2 micro cards, one accent) -->
+<!-- 09 · Example · S16 Multi-card Brief (3 x 2 micro cards, one accent) -->
 <section class="slide light" data-layout="S16" data-animate="field-notes" data-slide-id="example">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Example · Placeholder</div>
-      <div class="r">08 / 10</div>
+      <div class="r">09 / 11</div>
     </div>
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr;gap:5vh;min-height:0">
       <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1683,12 +1740,12 @@
   </div>
 </section>
 
-<!-- 09 · Control and first outcome · S13 Three Forces (left ink hero + right three cards) -->
+<!-- 10 · Control and first outcome · S13 Three Forces (left ink hero + right three cards) -->
 <section class="slide light" data-layout="S13" data-animate="three-forces" data-slide-id="control">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">Control · First outcome</div>
-      <div class="r">09 / 10</div>
+      <div class="r">10 / 11</div>
     </div>
     <div data-anim="up" style="flex:1;padding:0;display:grid;grid-template-columns:5fr 11fr;gap:1.4vw;min-height:0">
       <div class="card-ink" style="padding:4vh 2.2vw 3.6vh;display:flex;flex-direction:column;justify-content:space-between;gap:3vh;min-height:0">
@@ -1736,14 +1793,14 @@
   </div>
 </section>
 
-<!-- 10 · Next · S10 Split Closing (left statement + pricing shape, right six questions) -->
+<!-- 11 · Next · S10 Split Closing (left statement + pricing shape, right six questions) -->
 <section class="slide split" data-layout="S10" data-animate="split-statement" data-slide-id="next">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-accent nav-lift" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden;gap:3vh">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
-          <div class="l">10 / 10</div>
+          <div class="l">11 / 11</div>
           <div class="r">Next</div>
         </div>
         <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
@@ -1795,7 +1852,19 @@ const SPEAKER_NOTES = [
       'Three numbers frame the deck: 19 years in UK imaging, 2 audiences, 1 approval a week.',
       'Today we want answers to six scoping questions so Extol can price a four-week pilot.'
     ],
-    transition: 'Start with why Amit is the right voice: the career he already has.'
+    transition: 'Before our view, ask: six questions, each from something we noticed.'
+  },
+  {
+    id: 'before-our-view', title: 'What we think is going on. Tell us where we\'re wrong.',
+    purpose: 'Ask before presenting: six questions, each from something we noticed, that re-weight everything after',
+    talk: [
+      'Ask, don\'t present. Read the six questions, then stop and let Amit talk.',
+      'Get Amit talking for 5-10 minutes before slide 3; his answers re-weight everything after.',
+      'Q01 and Q03 are the deal-breakers: if he can\'t separate Radiobotics, AXREM and DigitalClinic.ai publicly, the founder-voice plan changes.',
+      'Frame it: six questions, each from something we noticed. His answers decide what we build.',
+      'Q06 sets outcome 01\'s number: what one NHS pilot is worth and how many conversations it takes.'
+    ],
+    transition: 'With his answers in hand, start with why Amit is the right voice: the career he already has.'
   },
   {
     id: 'why-amit', title: 'Amit has worked every side of UK imaging',
