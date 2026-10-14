@@ -23,15 +23,16 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 
 ## Ghost deck (action titles)
 1. **Cover:** A founder voice NHS imaging buyers and investors already trust.
-2. **Why Amit:** Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.
-3. **Same room:** Uche Nnene, met at the same event, has the same gap in finance; we've put the same engine to Effectivepoint.
-4. **Goal:** Two audiences, one voice: NHS buyers for pilots, investors for the raise.
-5. **How it works:** One recording a week becomes a week of founder content.
-6. **Proof:** The engine already runs: four Extol agents, each with a sourced result.
-7. **Tools:** The stack. One job each.
-8. **Example:** One topic becomes four assets for two audiences.
-9. **Control:** One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.
-10. **Next:** Six answers, then we price the pilot.
+2. **Before our view:** What we think is going on. Tell us where we're wrong.
+3. **Why Amit:** Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.
+4. **Same room:** Uche Nnene, met at the same event, has the same gap in finance; we've put the same engine to Effectivepoint.
+5. **Goal:** Two audiences, one voice: NHS buyers for pilots, investors for the raise.
+6. **How it works:** One recording a week becomes a week of founder content.
+7. **Proof:** The engine already runs: four Extol agents, each with a sourced result.
+8. **Tools:** The stack. One job each.
+9. **Example:** One topic becomes four assets for two audiences.
+10. **Control:** One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.
+11. **Next:** Six answers, then we price the pilot.
 
 ## Slide content
 
@@ -43,7 +44,21 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 - Footer: Prepared for Amit Chavda · London, October 2026
 - Notes: Open on the credibility gap: buyers and investors back founders they already know. Amit already has the career; this makes it visible.
 
-### 2. Why Amit (Situation)
+### 2. Before our view (questions first, before presenting)
+- Kicker: Before our view
+- Title: What we think is going on. Tell us where we're wrong.
+- Sub: Six questions, each from something we noticed. Your answers decide what we build.
+- Table, WHAT WE NOTICED -> THE QUESTION:
+  - 01 You sell AI to the NHS by day at Radiobotics and are building DigitalClinic.ai alongside it. -> **Where does Radiobotics end and DigitalClinic.ai begin, and who has to agree where that line sits?**
+  - 02 You have been the radiographer, the commissioner and the vendor. -> **When an NHS imaging lead hasn't met you, why would they pilot a startup over a vendor they already buy from?**
+  - 03 You now help shape AXREM's view on AI in imaging. -> **Which of your views can you say in public, and which belong to AXREM?**
+  - 04 An NHS AI purchase passes radiology, IT, procurement and finance. -> **Who says yes to a DigitalClinic.ai pilot, and who has the problem first?**
+  - 05 Investors back traction, not CVs. -> **What does an investor need to see before the first cheque: pilots, letters of intent, or an audience that listens?**
+  - 06 Followers don't pay. Pilots and cheques do. -> **What is one NHS pilot worth to you, and how many conversations does it take to land one?**
+- Footer: Discussion document · Public work history (LinkedIn via Apollo), Oct 2026
+- Notes: Ask, don't present. Get Amit talking for 5-10 minutes before slide 3; his answers re-weight everything after. Q01 and Q03 are the deal-breakers: if he can't separate Radiobotics, AXREM and DigitalClinic.ai publicly, the founder-voice plan changes. Q06 sets outcome 01's number.
+
+### 3. Why Amit (Situation)
 - Title: Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.
 - Exhibit (timeline, 4 stages):
   - **Clinic** 2007-2013: Lead Radiographer, Brighton and Sussex University Hospital
@@ -53,7 +68,7 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 - Callout: Few AI founders have stood in the reading room, the commissioning meeting and the vendor pitch. That is DigitalClinic.ai's edge, and today almost nobody outside his network sees it.
 - Source: LinkedIn work history via Apollo, Oct 2026.
 
-### 3. Same room (Complication)
+### 4. Same room (Complication)
 - Kicker: Same event, same gap
 - Title: Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.
 - Left, who: **Dr Uche Nnene FCCA**, co-founder, Effectivepoint. Former EY partner. ERP, Finance and AI transformation for CFOs. Met at [Event name].
@@ -63,20 +78,20 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 - Footnote: Effectivepoint named with permission [confirm with Uche before sending].
 - Notes: Why this matters now: we met them in the same room, and the pattern is identical. Share the approach, never the other client's numbers.
 
-### 4. Goal (Resolution)
+### 5. Goal (Resolution)
 - Title: Two audiences, one voice: NHS buyers for pilots, investors for the raise.
 - 01 **Qualified conversations with NHS imaging buyers.** Radiology leads, PACS/IT and procurement see a founder who knows their workflow. Every post leads to a page and a tracked enquiry route.
 - 02 **Investor-ready credibility.** A visible track record and audience that shortens diligence and warms investor intros.
 - Bar: Founder first. DigitalClinic.ai page amplifies. Radiobotics and AXREM content stays out.
 - Notes: Complication: a startup with no public voice starts every buyer and investor conversation cold.
 
-### 5. How it works
+### 6. How it works
 - Title: One recording a week becomes a week of founder content.
 - Steps: **Record** (one 30-min session: explainer, conversation or event debrief; format to agree) -> **Edit** (full video and short clips) -> **Package** (LinkedIn posts, article, newsletter, investor update) -> **Approve** (one weekly review) -> **Publish** (every channel, scheduled) -> **Learn** (the numbers set next week).
 - Only Record and Approve need Amit.
 - Callout: The DigitalClinic.ai website is home base. Every post points to a page about Amit, the product, an article or a demo request.
 
-### 6. Proof
+### 7. Proof
 - Kicker: Running today
 - Title: The engine already runs: four Extol agents, each with a sourced result.
 - Cards:
@@ -88,7 +103,7 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 - Source: extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly 29 Mar-29 Apr 2026.
 - Notes: Proof that the pieces already work, on our own and clients' accounts. Amit's version reuses the LinkedIn Manager and Social Media Manager directly.
 
-### 7. Tools
+### 8. Tools
 - Title: The stack. One job each.
 | Tool | Its job | What you get |
 | --- | --- | --- |
@@ -99,21 +114,21 @@ Remake of `Ismael_x_Extol.pptx` (same 7-step logic, same Extol stack), rebuilt f
 | LinkedIn manager | Authority and conversations | Founder profile, posting and engagement in your voice; DigitalClinic.ai page amplifies |
 - Footer: LinkedIn is the main channel for NHS and investor audiences. Full recordings go to YouTube; the newsletter doubles as the investor update.
 
-### 8. Example
+### 9. Example
 - Title: One topic becomes four assets for two audiences.
 - Placeholder: EXAMPLE TO BE PRODUCED FROM AMIT'S FIRST RECORDING (nothing published, nothing quoted yet)
 - Proposed topic: "What should an NHS imaging department ask before it buys AI?"
 - Assets: 60-second LinkedIn clip (buyers) · search article (buyers, AI search) · newsletter section (both) · investor-update paragraph on what buyers are asking (investors)
 - Notes: Proposed topic only; the real example replaces this after recording one.
 
-### 9. Control and first outcome
+### 10. Control and first outcome
 - Title: One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.
 - Steps: 1 Build (weekly pack) · 2 Review (claims, brand, links, once) · 3 Publish (only approved items) · 4 Learn (views, clicks, enquiries, investor replies)
 - Guardrails: no Radiobotics products, customers or pipeline; AXREM positions only when AXREM has published them; clinical, regulatory and performance claims need explicit sign-off; check the Radiobotics contract and conflict-of-interest policy before launch. Everything runs in Amit's own accounts; he owns every account, credential and file.
 - Outcome 01: the first qualified NHS buyer conversation that came from content. Target: a number we agree before we start. Proof: every enquiry traced to the post that sent it.
 - Weekly output (proposed, to confirm): 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter.
 
-### 10. Next
+### 11. Next
 - Title: Six answers, then we price the pilot.
 - 01 **DigitalClinic.ai:** what it does in one line, its stage, and are you raising now?
 - 02 **Audience:** which trusts, roles and investors, and where should each post send them?

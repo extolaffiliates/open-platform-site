@@ -37,6 +37,27 @@ Prepared for Amit Chavda · London, October 2026
 .speakernote
     Open on the credibility gap: buyers and investors back founders they already know. Amit already has the career; this makes it visible.
 
+# What we think is going on. Tell us where we're wrong.
+
+.text {Before our view} classname:{kicker}
+
+Six questions, each from something we noticed. Your answers decide what we build.
+
+| | What we noticed | The question |
+|---|---|---|
+| **01** | You sell AI to the NHS by day at Radiobotics and are building DigitalClinic.ai alongside it. | **Where does Radiobotics end and DigitalClinic.ai begin, and who has to agree where that line sits?** |
+| **02** | You have been the radiographer, the commissioner and the vendor. | **When an NHS imaging lead hasn't met you, why would they pilot a startup over a vendor they already buy from?** |
+| **03** | You now help shape AXREM's view on AI in imaging. | **Which of your views can you say in public, and which belong to AXREM?** |
+| **04** | An NHS AI purchase passes radiology, IT, procurement and finance. | **Who says yes to a DigitalClinic.ai pilot, and who has the problem first?** |
+| **05** | Investors back traction, not CVs. | **What does an investor need to see before the first cheque: pilots, letters of intent, or an audience that listens?** |
+| **06** | Followers don't pay. Pilots and cheques do. | **What is one NHS pilot worth to you, and how many conversations does it take to land one?** |
+
+.container classname:{source}
+    Discussion document · Public work history (LinkedIn via Apollo), October 2026
+
+.speakernote
+    Ask, don't present. Get Amit talking for 5-10 minutes before slide 3; his answers re-weight everything after. Q01 and Q03 are the deal-breakers: if he can't separate Radiobotics, AXREM and DigitalClinic.ai publicly, the founder-voice plan changes. Q06 sets outcome 01's number.
+
 # Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.
 
 .text {Why Amit} classname:{kicker}

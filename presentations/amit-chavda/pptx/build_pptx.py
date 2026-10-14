@@ -76,7 +76,7 @@ def new_slide(page, kicker, title, dark=False, notes=None):
     if title:
         text(s, M, x(0.75), W - 2 * M, x(1.2), title, 28, fg, DISPLAY, True)
     text(s, M, H - x(0.45), x(9), x(0.3), FOOT, 9, sub)
-    text(s, W - M - x(0.6), H - x(0.45), x(0.6), x(0.3), f"{page:02d} / 10", 9, sub, MONO)
+    text(s, W - M - x(0.6), H - x(0.45), x(0.6), x(0.3), f"{page:02d} / 11", 9, sub, MONO)
     if notes:
         s.notes_slide.notes_text_frame.text = notes
     return s
@@ -115,8 +115,30 @@ for (l, t, w, h), (n, lab) in zip(cols(3, x(4.35), x(1.3), 0.4, width=x(9)),
     text(s, l, t + x(0.85), w, x(0.35), lab, 12, SAGE)
 text(s, M, x(5.95), x(8), x(0.3), "Prepared for Amit Chavda · London, October 2026", 11, SAGE)
 
-# 2 Why Amit
-s = new_slide(2, "Why Amit", "Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.",
+# 2 Before our view
+s = new_slide(2, "Before our view", "What we think is going on. Tell us where we're wrong.", notes="Ask, don't present. Get Amit talking for 5-10 minutes before slide 3; his answers re-weight everything after. Q01 and Q03 are the deal-breakers: if he can't separate Radiobotics, AXREM and DigitalClinic.ai publicly, the founder-voice plan changes. Q06 sets outcome 01's number.")
+text(s, M, x(1.35), W - 2 * M, x(0.35), 'Six questions, each from something we noticed. Your answers decide what we build.', 14, MOSS)
+qs = [('You sell AI to the NHS by day at Radiobotics and are building DigitalClinic.ai alongside it.', 'Where does Radiobotics end and DigitalClinic.ai begin, and who has to agree where that line sits?'),
+      ('You have been the radiographer, the commissioner and the vendor.', "When an NHS imaging lead hasn't met you, why would they pilot a startup over a vendor they already buy from?"),
+      ("You now help shape AXREM's view on AI in imaging.", 'Which of your views can you say in public, and which belong to AXREM?'),
+      ('An NHS AI purchase passes radiology, IT, procurement and finance.', 'Who says yes to a DigitalClinic.ai pilot, and who has the problem first?'),
+      ('Investors back traction, not CVs.', 'What does an investor need to see before the first cheque: pilots, letters of intent, or an audience that listens?'),
+      ("Followers don't pay. Pilots and cheques do.", 'What is one NHS pilot worth to you, and how many conversations does it take to land one?')]
+text(s, M + x(0.55), x(1.85), x(4), x(0.25), "WHAT WE NOTICED", 9, MOSS, MONO, True)
+text(s, M + x(4.9), x(1.85), x(4), x(0.25), "THE QUESTION", 9, MOSS, MONO, True)
+top, rh = x(2.15), x(0.72)
+box(s, M, top, W - 2 * M, Pt(1.5), MOSS)
+for i, (seen, q) in enumerate(qs):
+    y = top + i * rh
+    if i:
+        box(s, M, y, W - 2 * M, Pt(0.75), PAPER)
+    text(s, M, y + x(0.1), x(0.5), x(0.4), f"0{i + 1}", 14, MOSS, DISPLAY, True)
+    text(s, M + x(0.55), y + x(0.1), x(4.1), rh - x(0.1), seen, 12, DEEP)
+    text(s, M + x(4.9), y + x(0.08), W - 2 * M - x(4.9), rh - x(0.08), q, 15, DEEP, DISPLAY, True)
+text(s, M, top + 6 * rh + x(0.08), W - 2 * M, x(0.3), 'Discussion document · Public work history (LinkedIn via Apollo), October 2026', 9, MOSS)
+
+# 3 Why Amit
+s = new_slide(3, "Why Amit", "Amit has worked every side of UK imaging: clinic, NHS, vendor and industry body.",
               notes="Situation: 19 years from radiographer to AI founder. Each stage is a buyer or investor objection he can already answer.")
 stages = [("Clinic", "2007-2013", "Lead Radiographer, Brighton and Sussex University Hospital"),
           ("NHS", "2014-2018", "NHS England and commissioning analytics"),
@@ -130,8 +152,8 @@ text(s, M + x(0.25), x(4.35), W - 2 * M - x(0.5), x(0.8),
      14, CREAM, anchor=MSO_ANCHOR.MIDDLE)
 text(s, M, x(5.35), W - 2 * M, x(0.3), "Source: LinkedIn work history via Apollo, October 2026. AXREM: UK trade association, 120+ member companies.", 9, MOSS)
 
-# 3 Same room
-s = new_slide(3, "Same event, same gap", "Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.",
+# 4 Same room
+s = new_slide(4, "Same event, same gap", "Uche Nnene, met at the same event, has the same gap in finance. We've put the same engine to Effectivepoint.",
               notes="We met them in the same room and the pattern is identical. Share the approach, never the other client's numbers. Confirm with Uche before naming Effectivepoint.")
 c3 = cols(3, x(2.2), x(2.55), 0.25)
 card(s, *c3[0], "Dr Uche Nnene FCCA", "Co-founder, Effectivepoint. Former EY partner. ERP, Finance and AI transformation for CFOs. Met at [Event name].", label="WHO", size=13)
@@ -141,8 +163,8 @@ box(s, M, x(4.95), W - 2 * M, x(0.6), PINE)
 text(s, M + x(0.25), x(4.95), W - 2 * M - x(0.5), x(0.6), "For Amit: the same buyer-comment engine on NHS imaging leaders' posts, alongside the weekly recording.", 14, BONE, anchor=MSO_ANCHOR.MIDDLE)
 text(s, M, x(5.7), W - 2 * M, x(0.3), "Effectivepoint named with permission [confirm with Uche before sending].", 9, MOSS)
 
-# 4 Goal
-s = new_slide(4, "The goal", "Two audiences, one voice: NHS buyers for pilots, investors for the raise.",
+# 5 Goal
+s = new_slide(5, "The goal", "Two audiences, one voice: NHS buyers for pilots, investors for the raise.",
               notes="Complication: a startup with no public voice starts every buyer and investor conversation cold. Resolution: founder-led content.")
 for (l, t, w, h), (lab, head, body) in zip(cols(2, x(2.2), x(1.9), 0.3), [
         ("01", "Qualified conversations with NHS imaging buyers", "Radiology leads, PACS/IT and procurement see a founder who knows their workflow. Every post leads to a page and a tracked enquiry route."),
@@ -151,8 +173,8 @@ for (l, t, w, h), (lab, head, body) in zip(cols(2, x(2.2), x(1.9), 0.3), [
 box(s, M, x(4.35), W - 2 * M, x(0.7), PINE)
 text(s, M + x(0.25), x(4.35), W - 2 * M, x(0.7), "Founder first. The DigitalClinic.ai page amplifies. Radiobotics and AXREM content stays out.", 15, CREAM, anchor=MSO_ANCHOR.MIDDLE)
 
-# 5 How it works
-s = new_slide(5, "How it works", "One recording a week becomes a week of founder content.",
+# 6 How it works
+s = new_slide(6, "How it works", "One recording a week becomes a week of founder content.",
               notes="Amit appears twice a week: recording and one review. Everything else is Extol.")
 steps = [("Record", "One 30-min session: explainer, conversation or event debrief (format to agree)", True),
          ("Edit", "Full video and short clips", False), ("Package", "LinkedIn posts, article, newsletter, investor update", False),
@@ -163,8 +185,8 @@ text(s, M, x(4.2), W - 2 * M, x(0.3), "Dark steps are the only ones that need Am
 box(s, M, x(4.6), W - 2 * M, x(0.7), PINE)
 text(s, M + x(0.25), x(4.6), W - 2 * M - x(0.5), x(0.7), "The DigitalClinic.ai website is home base. Every post points to a page about Amit, the product, an article or a demo request.", 14, CREAM, anchor=MSO_ANCHOR.MIDDLE)
 
-# 6 Proof
-s = new_slide(6, "Running today", "The engine already runs: four Extol agents, each with a sourced result.",
+# 7 Proof
+s = new_slide(7, "Running today", "The engine already runs: four Extol agents, each with a sourced result.",
               notes="Proof that the pieces already work. Amit's version reuses the LinkedIn Manager and the Social Media Manager directly.")
 for (l, t, w, h), (big, head, body) in zip(cols(4, x(2.1), x(2.45), 0.2), [
         ("40%", "LinkedIn Manager", "of invites accepted across 25 live personal brand campaigns. A personal note for every request."),
@@ -179,8 +201,8 @@ box(s, M, x(4.8), W - 2 * M, x(0.6), PINE)
 text(s, M + x(0.25), x(4.8), W - 2 * M - x(0.5), x(0.6), "Fixed price, agreed up front. Built in your accounts; you own everything. No lock-in.", 14, BONE, anchor=MSO_ANCHOR.MIDDLE)
 text(s, M, x(5.55), W - 2 * M, x(0.3), "Source: extol.si case studies; LinkedIn analytics to 29 Apr 2026; Instantly dashboard 29 Mar to 29 Apr 2026.", 9, MOSS)
 
-# 7 Tools
-s = new_slide(7, "The tools", "The stack. One job each.")
+# 8 Tools
+s = new_slide(8, "The tools", "The stack. One job each.")
 rows = [("TOOL", "ITS JOB", "WHAT YOU GET"),
         ("ChatGPT", "The writer behind everything", "Scripts, posts, articles, newsletters and investor updates, drafted from your recordings"),
         ("Higgsfield", "Video quality", "Clean edits, subtitles, motion and covers. Full videos plus vertical shorts"),
@@ -202,8 +224,8 @@ for r, row in enumerate(rows):
     top += rh
 text(s, M, top + x(0.2), W - 2 * M, x(0.4), "LinkedIn is the main channel for NHS and investor audiences. Full recordings go to YouTube; the newsletter doubles as the investor update.", 11, MOSS)
 
-# 8 Example
-s = new_slide(8, "An example", "One topic becomes four assets for two audiences.",
+# 9 Example
+s = new_slide(9, "An example", "One topic becomes four assets for two audiences.",
               notes="Proposed topic only. Nothing is quoted or published; the real example replaces this after the first recording.")
 box(s, M, x(1.85), W - 2 * M, x(1.05), CREAM, MOSS, dash=True)
 text(s, M + x(0.25), x(1.97), W - 2 * M - x(0.5), x(0.3), "PLACEHOLDER · EXAMPLE TO BE PRODUCED FROM AMIT'S FIRST RECORDING", 10, MOSS, MONO, True)
@@ -213,8 +235,8 @@ for (l, t, w, h), (head, body) in zip(cols(4, x(3.2), x(1.5)), [
         ("Newsletter", "One section, sent via Apollo. For both."), ("Investor update", "What buyers are asking this month. For investors.")]):
     card(s, l, t, w, h, head, body, size=13)
 
-# 9 Control
-s = new_slide(9, "Control and the first outcome", "One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.",
+# 10 Control
+s = new_slide(10, "Control and the first outcome", "One approval keeps Radiobotics, AXREM and DigitalClinic.ai cleanly separate.",
               notes="He is still employed at Radiobotics: separation is a feature, not a risk. The four-week pilot proves the first outcome.")
 lw = x(6.7)
 for i, ((l, t, w, h), (head, body)) in enumerate(zip(cols(4, x(2.2), x(1.35), 0.12, width=lw), [
@@ -230,8 +252,8 @@ card(s, rl, x(2.2), W - M - rl, x(3.1), "The first qualified NHS buyer conversat
      "Target: a number we agree before we start.\nProof: every enquiry traced to the post that sent it.\nWeekly output (proposed): 1 edited recording, 4-6 shorts, 3 LinkedIn posts, 1 article, 1 newsletter.",
      dark=True, label="OUTCOME 01", size=13)
 
-# 10 Next
-s = new_slide(10, "Next", "Six answers, then we price the pilot.", dark=True)
+# 11 Next
+s = new_slide(11, "Next", "Six answers, then we price the pilot.", dark=True)
 qs = [("DigitalClinic.ai", "What it does in one line, its stage, and are you raising now?"),
       ("Audience", "Which trusts, roles and investors, and where should each post send them?"),
       ("Roles", "What does your Radiobotics contract allow, and how do you disclose AXREM and DigitalClinic.ai?"),
