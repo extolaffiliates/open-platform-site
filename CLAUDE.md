@@ -2,8 +2,8 @@
 
 ## Presentations: always use the full toolkit
 
-Whenever the user asks for a presentation, deck, slides, pitch, keynote, QBR or similar, ALWAYS use all four repos
-together, following `.claude/skills/mckinsey-deck/SKILL.md`:
+Whenever the user asks for a presentation, deck, slides, pitch, keynote, QBR or similar, ALWAYS run the `/presentationdesigns`
+skill (`.claude/skills/presentationdesigns/SKILL.md`), which uses all four repos together plus Impeccable QA:
 
 1. **McKinsey method** (`mckinsey-deck` skill): question -> SCR storyline -> ghost deck of action titles -> slides.
 2. **OpenDesign** (`~/tools/open-design`): pick a design system from `design-systems/` (default `corporate`,
