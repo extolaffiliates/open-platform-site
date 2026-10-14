@@ -13,7 +13,7 @@ clone_or_pull() {  # $1 = owner/repo
   if [ -d "$dir/.git" ]; then git -C "$dir" pull --ff-only -q || true; else git clone -q --depth 1 "https://github.com/$1.git" "$dir"; fi
 }
 
-for repo in op7418/guizang-ppt-skill nexu-io/open-design iamgio/quarkdown FormidableLabs/spectacle; do
+for repo in op7418/guizang-ppt-skill nexu-io/open-design iamgio/quarkdown FormidableLabs/spectacle pbakaus/impeccable; do
   clone_or_pull "$repo"
 done
 
@@ -25,6 +25,10 @@ cp -r "$TOOLS_DIR/guizang-ppt-skill" "$SKILLS_DIR/guizang-ppt-skill"
 for s in data-report frontend-slides slides frame-data-chart-nyt design-consultation html-ppt-retro-quarterly-review; do
   rm -rf "$SKILLS_DIR/$s"; cp -r "$TOOLS_DIR/open-design/skills/$s" "$SKILLS_DIR/$s"
 done
+
+# 2b. Impeccable design skill + its subagents (engine binary self-downloads on first run)
+rm -rf "$SKILLS_DIR/impeccable"; cp -r "$TOOLS_DIR/impeccable/plugin/skills/impeccable" "$SKILLS_DIR/impeccable"
+mkdir -p "$HOME/.claude/agents"; cp "$TOOLS_DIR/impeccable/plugin/agents/"*.md "$HOME/.claude/agents/"
 
 # QUICK=1 (used by the SessionStart hook): repos + skills only, skip the slow builds.
 if [ "${QUICK:-0}" = "1" ]; then echo "Quick install done (skills only)."; exit 0; fi

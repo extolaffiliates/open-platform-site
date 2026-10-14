@@ -33,4 +33,8 @@ Consulting-grade decks for Extol Affiliates: the McKinsey method (as a Claude sk
 - **Interactive sales demos embedded on the site** -> Spectacle.
 - **Brand exploration / many directions quickly** -> OpenDesign (run locally, not in CI).
 
+## Design QA: Impeccable
+`pbakaus/impeccable` (Apache-2.0) is installed as the `impeccable` skill: `/impeccable audit|critique|polish <target>` plus 59 deterministic detector rules.
+Run before sending any HTML deck: `~/.claude/skills/impeccable/scripts/impeccable detect --json <file.html>`.
+
 Licence note: Guizang (AGPL) and Quarkdown (GPL) are fine as tools; do not copy their source into proprietary products you distribute or host.
